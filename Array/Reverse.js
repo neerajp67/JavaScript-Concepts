@@ -4,12 +4,20 @@
 const arr = [1, 2, 3, 4, 5, 6, 7];
 let n = arr.length;
 
+let uniqueArr = []; //for solutions where new array is required to store unique items;
+
 // method 1: using Array.reverse(), changes orignal array
-// let reversedArray = arr.reverse();
-// console.log(reversedArray);
+// console.log(arr.reverse());
 
 // method 2: using Array.toReversed(), changes orignal array (older browsers may not support this method)
-let reversedArray = arr.toReversed();
-console.log(reversedArray);
+// console.log(arr.toReversed());
+
+// method 3: using for loop to modify orignal array by swaping the items
+// for (let i = 0; i <= n/2; i++) {
+//     let temp = arr[i];
+//     arr[i] = arr[n - 1 -i];
+//     arr[n - 1 -i] = temp;
+// }
+// console.log(arr)
 
 
