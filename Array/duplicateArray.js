@@ -9,5 +9,21 @@ let uniqueArray = [];
 // console.log(uniqueArray)
 
 // method 2: shorthand for the method 1
-uniqueArray = [...new Set(arr)];
-console.log(uniqueArray)
+// uniqueArray = [...new Set(arr)];
+// console.log(uniqueArray)
+
+// method 3: using for loop and includes(), create new array
+// for (let i = 0; i <= n - 1; i++) {
+//     if (!uniqueArray.includes(arr[i])) {
+//         uniqueArray.push(arr[i]);
+//     }
+// }
+// console.log(uniqueArray);
+
+// method 4: using forEach loop and includes(); same as method 3, create new array
+arr.forEach(element => {
+    if (!uniqueArray.includes(element)) {
+        uniqueArray.push(element);
+    }
+});
+console.log(uniqueArray);
