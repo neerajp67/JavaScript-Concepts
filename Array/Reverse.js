@@ -4,7 +4,7 @@
 const arr = [1, 2, 3, 4, 5, 6, 7];
 let n = arr.length;
 
-let uniqueArr = []; //for solutions where new array is required to store unique items;
+let newArray = []; //for solutions where new array is required to store unique items;
 
 // method 1: using Array.reverse(), changes orignal array
 // console.log(arr.reverse());
@@ -19,5 +19,11 @@ let uniqueArr = []; //for solutions where new array is required to store unique 
 //     arr[n - 1 -i] = temp;
 // }
 // console.log(arr)
+
+// method 3: using for loop, create new array
+for (let i = 0; i <= n -1; i++) {
+    newArray.unshift(arr[i]); //add the item at the start of the array
+}
+console.log(newArray)
 
 
