@@ -4,7 +4,7 @@
 const arr = [1, 2, 3, 4, 5, 6, 7];
 let n = arr.length;
 
-let uniqueArr = []; //for solutions where new array is required to store unique items;
+let newArray = []; //for solutions where new array is required to store unique items;
 
 // method 1: using Array.reverse(), changes orignal array
 // console.log(arr.reverse());
@@ -19,5 +19,39 @@ let uniqueArr = []; //for solutions where new array is required to store unique 
 //     arr[n - 1 -i] = temp;
 // }
 // console.log(arr)
+
+// method 4: using for loop, create new array
+// for (let i = 0; i <= n -1; i++) {
+//     newArray.unshift(arr[i]); //add the item at the start of the array
+// }
+// console.log(newArray)
+
+// method 5: using forEach loop (similar to method 4), create new array
+// arr.forEach(element => {
+//     newArray.unshift(element);    
+// });
+// console.log(newArray)
+
+// method 6: using reverse for loop, create new array
+// for(let i = n - 1; i >= 0; i--) {
+//     newArray.push(arr[i]);
+// }
+// console.log(newArray);
+
+// method 7: using reduce(); iterates array from left to right, return new array
+// newArray = arr.reduce((acc, cur) =>{
+//     acc.unshift(cur);
+//     return acc
+// }, [])
+// console.log(newArray)
+
+// method 8: using reduceRIght(); iterates array from right to left, return new array
+newArray = arr.reduceRight((acc, cur) => {
+    acc.push(cur);
+    return acc
+}, [])
+console.log(newArray)
+
+
 
 
