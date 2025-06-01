@@ -26,11 +26,17 @@ let newArray = []; //for solutions where new array is required to store unique i
 // }
 // console.log(newArray)
 
-// method 5: using reverse for loop, create new array
-for(let i = n - 1; i >= 0; i--) {
-    newArray.push(arr[i]);
-}
-console.log(newArray);
+// method 5: using forEach loop (similar to method 4), create new array
+// arr.forEach(element => {
+//     newArray.unshift(element);    
+// });
+// console.log(newArray)
+
+// method 6: using reverse for loop, create new array
+// for(let i = n - 1; i >= 0; i--) {
+//     newArray.push(arr[i]);
+// }
+// console.log(newArray);
 
 
 
