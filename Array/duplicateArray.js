@@ -21,8 +21,24 @@ let uniqueArray = [];
 // console.log(uniqueArray);
 
 // method 4: using forEach loop and includes(); same as method 3, create new array
-arr.forEach(element => {
-    if (!uniqueArray.includes(element)) {
+// arr.forEach(element => {
+//     if (!uniqueArray.includes(element)) {
+//         uniqueArray.push(element);
+//     }
+// });
+// console.log(uniqueArray);
+
+//method 5: using for loop and indexOf(), creates new array
+// for (let i = 0; i <= n - 1; i++) {
+//     if(arr.indexOf(arr[i]) == i) {
+//         uniqueArray.push(arr[i]);
+//     }
+// }
+// console.log(uniqueArray);
+
+//method 5: using forEach loop and indexOf(); same as method 5, creates new array
+arr.forEach((element, index) => {
+    if(arr.indexOf(element) == index) {
         uniqueArray.push(element);
     }
 });
