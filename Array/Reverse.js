@@ -20,10 +20,17 @@ let newArray = []; //for solutions where new array is required to store unique i
 // }
 // console.log(arr)
 
-// method 3: using for loop, create new array
-for (let i = 0; i <= n -1; i++) {
-    newArray.unshift(arr[i]); //add the item at the start of the array
+// method 4: using for loop, create new array
+// for (let i = 0; i <= n -1; i++) {
+//     newArray.unshift(arr[i]); //add the item at the start of the array
+// }
+// console.log(newArray)
+
+// method 5: using reverse for loop, create new array
+for(let i = n - 1; i >= 0; i--) {
+    newArray.push(arr[i]);
 }
-console.log(newArray)
+console.log(newArray);
+
 
 
