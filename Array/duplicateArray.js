@@ -37,9 +37,18 @@ let uniqueArray = [];
 // console.log(uniqueArray);
 
 //method 5: using forEach loop and indexOf(); same as method 5, creates new array
-arr.forEach((element, index) => {
-    if(arr.indexOf(element) == index) {
-        uniqueArray.push(element);
+// arr.forEach((element, index) => {
+//     if(arr.indexOf(element) == index) {
+//         uniqueArray.push(element);
+//     }
+// });
+// console.log(uniqueArray);
+
+
+// method 6: using reverse for loop and splice, modify original array
+for (let i = n - 1; i >= 0; i--) {
+    if(arr.indexOf(arr[i]) !== i) {
+        arr.splice(i, 1);
     }
-});
-console.log(uniqueArray);
+}
+console.log(arr);
