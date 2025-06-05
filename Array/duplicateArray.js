@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, 4, 3, 2, 5, 6, 5, 6];
+const arr = [1, 2, 3, 4, 3, 2, 6, 1, 6];
 const n = arr.length;
 
 let uniqueArray = [];
@@ -54,5 +54,17 @@ let uniqueArray = [];
 // console.log(arr);
 
 // method 6: using filter
-uniqueArray = arr.filter((item, index) => arr.indexOf(item) == index);
-console.log(uniqueArray)
+// uniqueArray = arr.filter((item, index) => arr.indexOf(item) == index);
+// console.log(uniqueArray)
+
+
+// method 7: using 2 for loops to modify original array
+// need to check this for edege cases and optimization
+for (let i = arr.length - 1; i >= 1; i--) {
+    for (let j = i - 1; j >= 0; j--) {
+        if (arr[j] === arr[i] && i != j) {
+            arr.splice(i, 1);
+        }
+    }
+}
+console.log(arr);
