@@ -46,11 +46,11 @@ let newArray = []; //for solutions where new array is required to store unique i
 // console.log(newArray)
 
 // method 8: using reduceRIght(); iterates array from right to left, return new array
-newArray = arr.reduceRight((acc, cur) => {
-    acc.push(cur);
-    return acc
-}, [])
-console.log(newArray)
+// newArray = arr.reduceRight((acc, cur) => {
+//     acc.push(cur);
+//     return acc
+// }, [])
+// console.log(newArray)
 
 
 
