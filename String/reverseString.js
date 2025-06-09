@@ -11,8 +11,8 @@ let newString = ""; //for solutions where new variable is required to store reve
 // console.log(newString);
 
 // method 2: using for loop, string concatenation, creates new string
-for(let i = 0; i <= n-1; i++) {    
-    newString = str[i] + newString;
-}
-console.log(newString);
+// for(let i = 0; i <= n-1; i++) {    
+//     newString = str[i] + newString;
+// }
+// console.log(newString);
 
