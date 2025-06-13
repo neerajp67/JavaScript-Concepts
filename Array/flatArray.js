@@ -3,17 +3,31 @@ let n = arr.length;
 
 let newArray = []
 
+// method 1: Using recursion
+// function flatArray(array) {
+//     for (let i = 0; i <= array.length - 1; i++) {
+//         if (Array.isArray(array[i])) {
+//             flatArray(array[i])
+//         } else {
+//             newArray.push(array[i])
+//         }
+//     }
+//     return newArray
+// }
+// console.log(flatArray(arr))
 
+// method 2: Using reduce
 function flatArray(array) {
-    for (let i = 0; i <= array.length - 1; i++) {
-        if (Array.isArray(array[i])) {
-            flatArray(array[i])
+    return array.reduce((acc, val) => {
+        if (Array.isArray(val)) {
+            acc.push(...flatArray(val))
         } else {
-            newArray.push(array[i])
+            acc.push(val)
         }
-    }
-    return newArray
+        return acc
+    }, [])
 }
-console.log(flatArray(arr))
+console.log(flatArray(arr), arr)
+
 
 
