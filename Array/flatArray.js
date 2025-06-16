@@ -17,17 +17,17 @@ let newArray = []
 // console.log(flatArray(arr))
 
 // method 2: Using reduce
-function flatArray(array) {
-    return array.reduce((acc, val) => {
-        if (Array.isArray(val)) {
-            acc.push(...flatArray(val))
-        } else {
-            acc.push(val)
-        }
-        return acc
-    }, [])
-}
-console.log(flatArray(arr), arr)
+// function flatArray(array) {
+//     return array.reduce((acc, val) => {
+//         if (Array.isArray(val)) {
+//             acc.push(...flatArray(val))
+//         } else {
+//             acc.push(val)
+//         }
+//         return acc
+//     }, [])
+// }
+// console.log(flatArray(arr), arr)
 
 
 
