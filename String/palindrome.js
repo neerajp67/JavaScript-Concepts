@@ -7,14 +7,28 @@ let n = str.length; //for soliutions where length of string is required;
 let newString = ""; //for solutions where new variable is required to store reversed string;
 
 // method 1: using for loop to travrse the string from start to end and compare with the reverse order
+// function isPalindrome(str) {
+//   for (let i = 0; i < n / 2; i++) {
+//     // Compare characters from the beginning and end
+//     if (str[i] !== str[n - 1 - i]) {
+//       return false; // Mismatch found
+//     }
+//   }
+//   return true; // No mismatches found, it's a palindrome
+// }
+
+// console.log(isPalindrome(str));
+
+// method 2: using for loop to travrse the cleaned string from start to end and compare with the reverse order
 function isPalindrome(str) {
+  let cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); // Clean the string
+  let n = cleanedStr.length; // Get the length of the cleaned string
   for (let i = 0; i < n / 2; i++) {
-    // Compare characters from the beginning and end
-    if (str[i] !== str[n - 1 - i]) {
-      return false; // Mismatch found
+    if (cleanedStr[i] !== cleanedStr[n - 1 - i]) {
+      return false;
     }
   }
-  return true; // No mismatches found, it's a palindrome
+  return true;
 }
 
-console.log(isPalindrome(str));
+console.log(isPalindrome('A man, a plan, a canal, Panama!'));
