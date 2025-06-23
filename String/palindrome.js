@@ -20,15 +20,15 @@ let newString = ""; //for solutions where new variable is required to store reve
 // console.log(isPalindrome(str));
 
 // method 2: using for loop to travrse the cleaned string from start to end and compare with the reverse order
-function isPalindrome(str) {
-  let cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); // Clean the string
-  let n = cleanedStr.length; // Get the length of the cleaned string
-  for (let i = 0; i < n / 2; i++) {
-    if (cleanedStr[i] !== cleanedStr[n - 1 - i]) {
-      return false;
-    }
-  }
-  return true;
-}
+// function isPalindrome(str) {
+//   let cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); // Clean the string
+//   let n = cleanedStr.length; // Get the length of the cleaned string
+//   for (let i = 0; i < n / 2; i++) {
+//     if (cleanedStr[i] !== cleanedStr[n - 1 - i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-console.log(isPalindrome('A man, a plan, a canal, Panama!'));
+// console.log(isPalindrome('A man, a plan, a canal, Panama!'));
