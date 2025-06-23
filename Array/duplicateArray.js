@@ -60,11 +60,11 @@ let uniqueArray = [];
 
 // method 7: using 2 for loops to modify original array
 // need to check this for edege cases and optimization
-for (let i = arr.length - 1; i >= 1; i--) {
-    for (let j = i - 1; j >= 0; j--) {
-        if (arr[j] === arr[i] && i != j) {
-            arr.splice(i, 1);
-        }
-    }
-}
-console.log(arr);
+// for (let i = arr.length - 1; i >= 1; i--) {
+//     for (let j = i - 1; j >= 0; j--) {
+//         if (arr[j] === arr[i] && i != j) {
+//             arr.splice(i, 1);
+//         }
+//     }
+// }
+// console.log(arr);
