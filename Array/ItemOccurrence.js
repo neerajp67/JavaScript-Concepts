@@ -23,16 +23,16 @@ const n = arr.length;
 //method 2: using another arrary to keep track of seen items, this will return the item that is first recurring in the array
 // this method will return the first recurring item based on the position of the item in the array
 // eg. if the array is [1, 2, 3, 4, 3, 2, 6, 1, 6] it will return 3
-function firstRecurringItem() {
-    let seenItems = [];
-    for (let i = 0; i < n; i++) {
-        if(seenItems.includes(arr[i])) {
-            return arr[i];
-        }
-        seenItems.push(arr[i])
-    }
-}
-console.log(firstRecurringItem());
+// function firstRecurringItem() {
+//     let seenItems = [];
+//     for (let i = 0; i < n; i++) {
+//         if(seenItems.includes(arr[i])) {
+//             return arr[i];
+//         }
+//         seenItems.push(arr[i])
+//     }
+// }
+// console.log(firstRecurringItem());
 
 // first non-recurring item in an array
 
@@ -48,6 +48,22 @@ console.log(firstRecurringItem());
 //             }
 //         }
 //     }
+// }
+// console.log(firstNonRecurringItem());
+
+// method 2: using 2 more array to keep track of seen items and non recurring items, this will return the first non-recurring item in the array
+// function firstNonRecurringItem() {
+//     let seenItems = [];
+//     let nonRecurringItems = [];
+//     for (let i = 0; i < n; i++) {
+//         if (seenItems.includes(arr[i])) {
+//             nonRecurringItems = nonRecurringItems.filter( (item) => item !== arr[i])
+//         } else {
+//             seenItems.push(arr[i]);
+//             nonRecurringItems.push(arr[i]);
+//         }
+//     }
+//     return nonRecurringItems[0] || null;
 // }
 // console.log(firstNonRecurringItem());
 
