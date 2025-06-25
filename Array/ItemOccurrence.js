@@ -52,20 +52,20 @@ const n = arr.length;
 // console.log(firstNonRecurringItem());
 
 // method 2: using 2 more array to keep track of seen items and non recurring items, this will return the first non-recurring item in the array
-function firstNonRecurringItem() {
-    let seenItems = [];
-    let nonRecurringItems = [];
-    for (let i = 0; i < n; i++) {
-        if (seenItems.includes(arr[i])) {
-            nonRecurringItems = nonRecurringItems.filter( (item) => item !== arr[i])
-        } else {
-            seenItems.push(arr[i]);
-            nonRecurringItems.push(arr[i]);
-        }
-    }
-    return nonRecurringItems[0] || null;
-}
-console.log(firstNonRecurringItem());
+// function firstNonRecurringItem() {
+//     let seenItems = [];
+//     let nonRecurringItems = [];
+//     for (let i = 0; i < n; i++) {
+//         if (seenItems.includes(arr[i])) {
+//             nonRecurringItems = nonRecurringItems.filter( (item) => item !== arr[i])
+//         } else {
+//             seenItems.push(arr[i]);
+//             nonRecurringItems.push(arr[i]);
+//         }
+//     }
+//     return nonRecurringItems[0] || null;
+// }
+// console.log(firstNonRecurringItem());
 
 
 
