@@ -30,7 +30,7 @@ let newArray = []
 // console.log(flatArray(arr), arr)
 
 // method 3: Using flat() method to flatten the array
-function flatArray() {
-    return arr.flat(Infinity)
-}
-console.log(flatArray())
+// function flatArray() {
+//     return arr.flat(Infinity)
+// }
+// console.log(flatArray())
