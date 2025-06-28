@@ -34,3 +34,10 @@ let newArray = []
 //     return arr.flat(Infinity)
 // }
 // console.log(flatArray())
+
+// method 4: Using flat() method to flatten the array with a specified depth
+// The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+function flatArray() {
+    return arr.flat(4) // The number 4 indicates the depth to which the array should be flattened
+}
+console.log(flatArray())
