@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+
+<body>
+    <h1>Local Storage API</h1>
+    <p>This is a simple demonstration of the Local Storage API.</p>
+
+
+    <input type="text" id="keyInput" placeholder="Enter key" />
+    <input type="text" id="valueInput" placeholder="Enter value" />
+    <button id="saveButton">Save Data</button>
+    <button id="loadButton">Load Data</button>
+    <button id="clearButton">Clear Data</button>
+    <br>
+    <br>
+    <div id="loadedData"></div>
+    <div id="data">
+        <h2>Stored Data</h2>
+        <ul id="dataList"></ul>
+    </div>
+
+    <br>
+    <hr>
+    <h2>Instructions</h2>
+    <p>Use the input fields to save data to localStorage.</p>
+    <p>Click "Save Data" to store the key-value pair.</p>
+    <p>Click "Load Data" to retrieve the value for a given key.</p>
+    <p>Click "Clear Data" to remove all data from localStorage.</p>
+    <p>Refresh the page to see that data persists.</p>
+    <hr>
+    <p>Check your browser's localStorage to see the saved data.</p>
+    <p>Open the console to see the script output.</p>
+
+    <script>
+        // Function to display all stored data
+        function displayData() {
+            const dataList = document.getElementById('dataList');
+            dataList.innerHTML = '';
+            if (localStorage.length === 0) {
+                dataList.innerHTML = '<li>No data stored in localStorage.</li>';
+                return;
+            }
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                const value = localStorage.getItem(key);
+                const listItem = document.createElement('li');
+                listItem.textContent = `${key}: ${value}`;
+                dataList.appendChild(listItem);
+            }
+        }
+
+        // Function to save data to localStorage
+        function saveData() {
+            const key = document.getElementById('keyInput').value;
+            const value = document.getElementById('valueInput').value;
+            if (!key || !value) {
+                alert("Please enter both key and value.");
+                return;
+            }
+            localStorage.setItem(key, value);
+            alert(`Data saved: ${key} = ${value}`);
+            displayData();
+            document.getElementById('keyInput').value = '';
+            document.getElementById('valueInput').value = '';
+            document.getElementById('loadedData').textContent = '';
+        }
+
+        // Function to load specific data from localStorage
+        function loadData() {
+            const key = document.getElementById('keyInput').value;
+            if (!key) {
+                alert("Please enter a key to load data.");
+                return;
+            }
+            const value = localStorage.getItem(key);
+            const loadedDataDiv = document.getElementById('loadedData');
+            if (value !== null) {
+                loadedDataDiv.textContent = `Loaded data: ${key} = ${value}`;
+            } else {
+                loadedDataDiv.textContent = `No data found for key: ${key}`;
+            }
+        }
+
+        // Function to clear data from localStorage
+        function clearData() {
+            localStorage.clear();
+            alert("All data cleared from localStorage.");
+            displayData();
+            document.getElementById('loadedData').textContent = '';
+        }
+
+        document.getElementById('saveButton').addEventListener('click', saveData);
+        document.getElementById('loadButton').addEventListener('click', loadData);
+        document.getElementById('clearButton').addEventListener('click', clearData);
+        window.onload = displayData;
+    </script>
+</body>
+
+</html>
