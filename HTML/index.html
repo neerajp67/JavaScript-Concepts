@@ -3,6 +3,7 @@
 <!-- It helps the browser to render the page correctly -->
 <!DOCTYPE html>
 
+<!-- The html element is the root element of the HTML document -->
 <!-- The lang attribute specifies the language of the document -->
 <!-- The lang attribute helps search engines and browsers understand the language of the content -->
 <html lang="en">
@@ -15,9 +16,87 @@
     <!-- The meta tag specifies the character encoding for the HTML document -->
     <meta charset="UTF-8" />
 
+    <!-- The author meta tag is used to provide information about the creator of the content -->
+    <!-- It can be useful for search engines and for identifying the creator of the content -->
+    <meta name="author" content="Neeraj Pandey"/>
+
+    <!-- The description meta tag provides a brief summary of the web page's content -->
+    <!-- It is often used by search engines to display a snippet of the page in search results -->
+    <meta name="description" content="This is my first web page created with HTML." />
+
+    <!-- The viewport meta tag controls the layout on mobile browsers -->
+    <!-- It ensures that the web page is responsive and displays correctly on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- The keywords meta tag is used to specify keywords relevant to the content of the web page -->
+    <!-- It can help search engines understand the main topics of the page -->
+    <meta name="keywords" content="HTML, web development, Neeraj Pandey" />
+
+    <!-- The robots meta tag provides instructions to web crawlers about how to index the page -->
+    <!-- It can be used to control whether the page should be indexed or followed by search engines -->
+    <!-- The content attribute specifies the indexing behavior for search engines -->
+    <!-- index: Allows the page to be indexed (default).
+      noindex: Tells robots NOT to include the page in search results.
+      follow: Allows robots to follow links on the page (default).
+      nofollow: Tells robots NOT to follow links on the page.
+      all: Equivalent to index, follow (default behavior).
+      none: Equivalent to noindex, nofollow.
+      noarchive: Prevents search engines from showing a cached link for the page.
+      nosnippet: Prevents a text snippet or video preview from being shown in search results. -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- The X-UA-Compatible meta tag is used to specify the compatibility mode for Internet Explorer -->
+    <!-- It helps ensure that the page is rendered using the latest rendering engine available in IE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- The refresh meta tag is used to automatically refresh the page after a specified time -->
+    <!-- The content attribute specifies the time in seconds before the page is refreshed -->
+     <!--  Can use URL to redirect after refresh content="5,url=index.html" -->
+    <!-- Should be used with caution -->
+    <meta http-equiv="refresh" content="5">
+
+    
+    <!-- Social Media/Open Graph Tags (for sharing previews) --> 
+    <!-- Open Graph meta tags are used to control how the page appears when shared on social media platforms -->
+    <!-- These tags help to provide a rich preview of the page when shared -->
+
+    <!-- The og:locale property specifies the locale of the content being shared -->
+    <!-- It helps social media platforms understand the language and region of the content -->
+    <meta property="og:locale" content="en_US" />
+
+    <!-- The og:type property specifies the type of object being shared -->
+    <!-- Common values include "website", "article", "video", etc. -->
+    <meta property="og:type" content="website" />
+
+    <!-- The og:site_name property specifies the name of the website -->
+    <!-- It helps to identify the source of the content when shared on social media -->
+    <meta property="og:site_name" content="My First Web Page" />
+
+    <!-- The og:title property specifies the title of the content being shared -->
+    <!-- It is often used as the main headline in the shared preview -->
+    <meta property="og:title" content="My First Web Page" />
+    
+    <!-- The og:description property provides a brief description of the content being shared -->
+    <!-- It is often used as the summary in the shared preview -->
+    <meta property="og:description" content="This is my first web page created with HTML." />
+
+    <!-- The og:image property specifies the URL of an image to be used in the shared preview -->
+    <!-- It is often used to provide a visual representation of the content -->
+    <meta property="og:image" content="http://example.com/image.jpg" />
+
+    <!-- The og:url property specifies the canonical URL of the page being shared -->
+    <!-- It helps to ensure that the correct URL is used when sharing the content -->
+    <meta property="og:url" content="http://example.com/" />
+
     <!-- Title of the web page -->
     <!-- The title tag sets the title of the web page, which appears in the browser tab -->
     <title>My First Web Page</title>
+
+    <!-- The link tag is used to link to external resources like stylesheets or icons -->
+    <!-- The rel attribute specifies the relationship between the current document and the linked resource -->
+    <!-- The href attribute specifies the URL of the linked resource -->
+    <!-- The type attribute specifies the media type of the linked resource -->
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
 
     <!-- CSS styles for the web page -->
     <!-- The style tag contains CSS styles that apply to the HTML elements -->
