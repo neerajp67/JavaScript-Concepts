@@ -2,6 +2,19 @@ html {
   font-size: 22px;
 }
 body {
-  background-color: #333 !important;
-  color: whitesmoke !important;
+  background-color: #333;
+  color: whitesmoke;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited, :active {
+  color: #8a2be2;
 }
