@@ -151,6 +151,10 @@
           <li><a href="#elements">Elements</a></li>
           <li><a href="#entities">Entities</a></li>
           <li><a href="#anchor">Anchor</a></li>
+          <li><a href="#image">Image</a></li>
+          <li><a href="#table">Table</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#footer">Go to bottom</a></li>
         </ul>
       </nav>
 
@@ -457,7 +461,6 @@
             <tr>
 
               <!-- The th tag is used to define a header cell in the table -->
-              <!-- The th tag is used to define the header cells of the table -->
               <!-- The scope attribute specifies whether the header cell applies to a row, column, or group of rows/columns -->
               <!-- The scope attribute helps screen readers and assistive technologies understand the relationship between the header and the data cells -->
               <th scope="col">Name</th>
@@ -471,7 +474,6 @@
           <tbody>
             <tr>
 
-              <!-- The td tag is used to define a standard cell in the table -->
               <!-- The td tag is used to define the data cells of the table -->
               <td>John Doe</td>
               <td>30</td>
@@ -515,6 +517,141 @@
 
       </article>
 
+      <hr>
+
+      <article id="form">
+
+        <h2>HTML Forms</h2>
+
+        <!-- The form tag is used to create an HTML form -->
+        <!-- The action attribute specifies the URL where the form data will be sent when submitted -->
+        <!-- The method attribute specifies the HTTP method to be used when submitting the form -->
+        <form action="https://httpbin.org/post" method="post">
+        
+          <!-- The fieldset tag is used to group related form elements together -->
+          <!-- It is often used to create a visual grouping of form controls -->
+          <fieldset>
+
+            <!-- The legend tag is used to provide a caption for the fieldset -->
+            <!-- It helps to describe the purpose of the grouped form elements -->
+            <legend>Personal Information</legend>
+        
+            <p>
+
+              <!-- The label tag is used to define a label for an input element -->
+              <!-- The for attribute associates the label with a specific input element by matching the input's id -->
+              <!-- This improves accessibility by allowing users to click the label to focus on the input field -->
+              <label for="name">Name:</label>
+        
+              <!-- The input tag is used to create various types of input fields -->
+              <!-- The type attribute specifies the type of input field to create -->
+              <input type="text" id="name" name="name" required>
+            </p>
+        
+            <p>
+              <label for="email">Email:</label>
+        
+              <!-- The input tag with type="email" creates an email input field -->
+              <!-- It provides built-in validation for email addresses -->
+              <!-- The required attribute specifies that the field must be filled out before submitting the form -->
+              <!-- The pattern attribute specifies a regular expression that the input value must match -->
+              <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </p>
+        
+            <p>
+              <label for="age">Age:</label>
+        
+              <!-- The input tag with type="number" creates a numeric input field -->
+              <!-- The min attribute specifies the minimum value allowed for the input -->
+              <!-- The max attribute specifies the maximum value allowed for the input -->
+              <input type="number" id="age" name="age" min="18" max="100" required>
+            </p>
+        
+            <p>
+              <label for="password">Password:</label>
+        
+              <!-- The input tag with type="password" creates a password input field -->
+              <!-- It hides the entered text for privacy -->
+              <input type="password" id="password" name="password" required minlength="8" pattern=".{8,}">
+            </p>
+
+            <p>
+              Gender:
+              
+              <!-- The input tag with type="radio" creates radio buttons -->
+              <!-- Radio buttons allow users to select one option from a set of mutually exclusive options -->
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </p>
+            
+            <p>
+              <label for="nationality">Nationality:</label>
+
+              <!-- The select tag is used to create a dropdown list -->
+              <!-- The name attribute specifies the name of the select element -->
+              <select id="nationality" name="nationality">
+
+                <!-- The optgroup tag is used to group related options in a dropdown list -->
+                <!-- It helps to organize options into categories for better readability -->
+                <optgroup label="Main Options">
+                  <!-- The option tag is used to define options in a dropdown list -->
+                  <!-- The value attribute specifies the value to be submitted when the option is selected -->
+                  <option value="indian">Indian</option>
+                  <option value="nri">NRI</option>
+                </optgroup>
+        
+                <option value="other">Other</option>
+              </select>
+            </p>
+        
+            <p>
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" list="city-options">
+
+              <!-- The datalist tag is used to provide a list of predefined options for an input element -->
+              <!-- It allows users to select from a list of options while still being able to enter custom values -->
+              <!-- The id attribute of the datalist should match the list attribute of the input element -->
+              <datalist id="city-options">
+                <option value="New Delhi">
+                <option value="Pune">
+                <option value="Bangalore">
+              </datalist>
+            </p>
+        
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Information</legend>
+
+            <p>
+              <label for="bio">Bio:</label>
+              <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+            </p>
+
+            <p>
+              <label for="subscribe">Subscribe to Newsletter:</label>
+
+              <!-- The input tag with type="checkbox" creates a checkbox -->
+              <!-- Checkboxes allow users to select one or more options -->
+              <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+          </fieldset>
+
+                  
+            <!-- The input tag with type="submit" creates a submit button -->
+            <!-- The value attribute specifies the text displayed on the button -->
+            <input type="submit" value="Submit">
+
+            <!-- The input tag with type="reset" creates a reset button -->
+            <!-- The reset button clears all the form fields and resets them to their default values -->
+            <button type="reset">Reset</button>
+        </form>
+
+      </article>
+
     </main>
 
     <hr>
@@ -522,9 +659,10 @@
     <!-- Footer section -->
     <!-- The footer tag is used to define the footer of the document -->
     <!-- It is often used to group footer content like copyright information, links, etc. -->
-    <footer>
+    <footer id="footer">
       <p>&copy; 2025 Neeraj Pandey. All rights reserved.</p>
       <p>Contact: <a href="mailto:neeraj@example.com">neeraj@example.com</a></p>
+      <p><a href="#">Go to top</a></p>
     </footer>
 
   </body>
