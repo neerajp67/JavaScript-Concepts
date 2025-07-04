@@ -104,13 +104,13 @@
     <!-- The style tag contains CSS styles that apply to the HTML elements -->
     <!-- The style tag is used to define internal CSS styles -->
     <style>
-      html {
+      /* html {
         font-size: 22px;
       }
       body {
         background-color: whitesmoke;
         color: #333;
-      }
+      } */
     </style>
 
     <!-- External CSS goes here-->
@@ -123,6 +123,21 @@
   <!-- The body section contains the content of the document -->
   <!-- The body section is where the visible content of the web page goes -->
   <body>
+
+    <!-- Navigation section -->
+    <!-- The nav tag is used to define a navigation section -->
+    <!-- It is often used to group navigation links together -->
+    <!-- Navigation links can be used to navigate to different sections of the page or to other pages -->
+
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#elements">Elements</a></li>
+        <li><a href="#entities">Entities</a></li>
+        <li><a href="#anchor">Anchor</a></li>
+      </ul>
+    </nav>
     
     <!-- Main heading of the web page -->
     <!-- The h1 tag is used for the main heading -->
@@ -244,17 +259,21 @@
 
       <hr>
 
-      <!-- HTML entities -->
-      <!-- HTML entities are used to represent special characters -->
-      <p>Here are some HTML entities:</p>
-      <ul>
-        <li>&amp; - Ampersand</li>
-        <li>&lt; - Less than</li>
-        <li>&gt; - Greater than</li>
-        <li>&quot; - Double quote</li>
-        <li>&#39; - Single quote</li>
-        <li>&copy; - Copyright</li>
-      </ul>
+      <section id="entities">    
+        <!-- HTML entities -->
+        <h2>HTML Entities:</h2>
+
+        <!-- HTML entities are used to represent special characters that have a specific meaning in HTML -->
+        <!-- They are used to display characters that would otherwise be interpreted as HTML code -->
+        <p>Here are some HTML entities:</p>
+        <ul>
+          <li>&amp; - Ampersand</li>
+          <li>&lt; - Less than</li>
+          <li>&gt; - Greater than</li>
+          <li>&quot; - Double quote</li>
+          <li>&#39; - Single quote</li>
+          <li>&copy; - Copyright</li>
+        </ul>
 
     </section>
 
@@ -294,7 +313,7 @@
       <!-- An internal URL is a link to another page within the same website -->
       <!-- It is often used to navigate to different sections of the same page or to other pages within the same site -->
       <!-- The href attribute can also be used to link to a specific section of the same page using an anchor tag -->
-      <a href="#lists">Go to #lists</a>
+      <a href="#">Go to top</a>
 
     </section>
   </body>
