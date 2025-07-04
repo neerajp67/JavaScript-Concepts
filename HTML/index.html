@@ -169,7 +169,6 @@
 
       <br>
 
-      <!-- article for lists -->
       <!-- The article tag is used to define a self-contained piece of content -->
       <!-- It is often used to group related content together -->
       <article id="lists">
@@ -239,11 +238,13 @@
       <hr>
   
       <article id="elements">    
-        
+
+        <h2>HTML Elements</h2>
+
         <section>
 
           <!-- Block level elements -->
-          <h2>Block level elements:</h2>
+          <h3>Block level elements:</h3>
     
           <!-- Block level elements take up the full width available -->
           <!-- They start on a new line and create a "block" of content -->
@@ -269,7 +270,7 @@
         <section>
 
           <!-- Inline elements -->
-          <h2>Inline elements:</h2>
+          <h3>Inline elements:</h3>
     
           <!-- Inline elements do not start on a new line -->
           <!-- They only take up as much width as necessary -->
@@ -301,6 +302,8 @@
         <!-- The aside tag is used to define content that is related to the main content but is not essential -->
         <!-- It is often used for sidebars, pull quotes, or additional information -->
         <aside>
+
+          <h3>Replacable vs Non-Replacable Elements</h3>
         
           <!-- The details tag is used to create a disclosure widget from which the user can obtain additional information -->
           <!-- The details tag can be used to create a collapsible section that can be expanded or collapsed -->
@@ -430,6 +433,87 @@
         </figure>
   
       </section>
+
+      <hr>
+
+      <article id="table">
+
+        <h2>HTML Table</h2>
+
+        <!-- The table tag is used to create a table -->
+        <!-- The table tag is used to group the entire table structure -->
+        <table>
+
+          <!-- The caption tag is used to provide a title or description for the table -->
+          <!-- It is often used to describe the content of the table -->
+          <caption>Sample Table</caption>
+
+          <!-- The thead tag is used to group the header content of the table -->
+          <!-- It is often used to define the column headers of the table -->
+          <thead>
+
+          <!-- The tr tag is used to define a row in the table -->
+          <!-- The tr tag is used to group the header row of the table -->
+            <tr>
+
+              <!-- The th tag is used to define a header cell in the table -->
+              <!-- The th tag is used to define the header cells of the table -->
+              <!-- The scope attribute specifies whether the header cell applies to a row, column, or group of rows/columns -->
+              <!-- The scope attribute helps screen readers and assistive technologies understand the relationship between the header and the data cells -->
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">City</th>
+            </tr>
+          </thead>
+
+          <!-- The tbody tag is used to group the body content of the table -->
+          <!-- It is often used to define the main content of the table -->
+          <tbody>
+            <tr>
+
+              <!-- The td tag is used to define a standard cell in the table -->
+              <!-- The td tag is used to define the data cells of the table -->
+              <td>John Doe</td>
+              <td>30</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>25</td>
+              <td>Los Angeles</td>
+            </tr>
+            <tr>
+              <td>Mike Johnson</td>
+              <td>35</td>
+              <td>Chicago</td>
+            </tr>
+            <tr>
+
+              <!-- The rowspan attribute is used to merge cells vertically -->
+              <!-- It allows a cell to span multiple rows -->
+              <td rowspan="2">Emily Davis</td>
+              <td>28</td>
+              <td>Miami</td>
+            </tr>
+            <tr>
+
+              <!-- The colspan attribute is used to merge cells horizontally -->
+              <!-- It allows a cell to span multiple columns -->
+              <td colspan="2">Not available</td>
+            </tr>
+          </tbody>
+
+          <!-- The tfoot tag is used to group the footer content of the table -->
+          <!-- It is often used to define summary or footer information for the table -->
+          <tfoot>
+            <tr>
+              <td colspan="3">End of Table</td>
+            </tr>
+          </tfoot>
+
+        </table>
+
+      </article>
 
     </main>
 
