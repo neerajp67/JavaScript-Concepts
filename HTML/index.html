@@ -124,145 +124,227 @@
   <!-- The body section is where the visible content of the web page goes -->
   <body>
 
-    <!-- Navigation section -->
-    <!-- The nav tag is used to define a navigation section -->
-    <!-- It is often used to group navigation links together -->
-    <!-- Navigation links can be used to navigate to different sections of the page or to other pages -->
+    <!-- Header section -->
+    <!-- The header tag is used to define the header of the document -->
+    <!-- It is often used to group introductory content or navigational links -->
+    <!-- The header can contain elements like headings, logos, navigation links, etc. -->
+    <header>
 
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#lists">Lists</a></li>
-        <li><a href="#elements">Elements</a></li>
-        <li><a href="#entities">Entities</a></li>
-        <li><a href="#anchor">Anchor</a></li>
-      </ul>
-    </nav>
-    
-    <!-- Main heading of the web page -->
-    <!-- The h1 tag is used for the main heading -->
-    <h1>Hello World!</h1>
+      <!-- Main heading of the web page -->
+      <!-- The h1 tag is used for the main heading -->
+      <h1>Hello World!</h1>
 
-    <!-- Paragraph of text -->
-    <!-- The p tag is used for paragraphs -->
-    <p>This is my first web page.</p>
+      <!-- Paragraph of text -->
+      <!-- The p tag is used for paragraphs -->
+      <p>This is my first web page.</p>
+
+      <!-- Navigation section -->
+      <!-- The nav tag is used to define a navigation section -->
+      <!-- It is often used to group navigation links together -->
+      <!-- Navigation links can be used to navigate to different sections of the page or to other pages -->
+       <!-- The aria-label attribute provides an accessible name for the navigation section -->
+      <!-- It helps screen readers and assistive technologies understand the purpose of the navigation -->
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#elements">Elements</a></li>
+          <li><a href="#entities">Entities</a></li>
+          <li><a href="#anchor">Anchor</a></li>
+        </ul>
+      </nav>
+
+    </header>
 
     <!-- Horizontal rule -->
     <!-- The hr tag is used to create a horizontal line -->
     <hr>
 
-    <!-- Section element -->
-    <!-- The section tag is used to define a section of content -->
-    <!-- It is often used to group related content together -->
-    <section id="lists">
-      <!-- The h2 tag is used for subheadings -->
-      <h2>Types of lists</h2>
+    <!-- Main content section -->
+    <!-- The main tag is used to define the main content of the document -->
+    <!-- It is often used to group the primary content of the page -->
+    <!-- The main tag should be used only once per page -->
+    <main>
+      <h1>Main Content</h1>
 
-      <!-- Unordered list -->
-      <h3>Unordered List</h3>
+      <br>
+
+      <!-- article for lists -->
+      <!-- The article tag is used to define a self-contained piece of content -->
+      <!-- It is often used to group related content together -->
+      <article id="lists">
+        <!-- The h2 tag is used for subheadings -->
+        <h2>Types of lists</h2>
+        
+        <!-- Section element -->
+        <!-- The section tag is used to define a section of content -->
+         <!-- It is often used to group related content together -->
+        <section>
+
+          <!-- Unordered list -->
+          <h3>Unordered List</h3>
+          
+          <!-- The ul tag is used to create an unordered list -->
+          <!-- The ul tag creates a list of items that do not have a specific order -->
+          <!-- The items in the list are defined using the li tag -->
+          <ul>
+            <!-- The li tag is used to define list items -->
+            <!-- Each li tag represents an item in the list -->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+
+        </section>
+        
+        <section>
+
+          <!-- Ordered list -->
+          <h3>Ordered List</h3>
+    
+          <!-- The ol tag is used to create an ordered list -->
+          <!-- The ol tag creates a list of items that have a specific order -->
+          <!-- The items in the list are defined using the li tag -->
+          <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ol>
+          
+        </section>
+
+        <section>
+
+          <!-- Definition list -->
+          <h3>Definition List</h3>
+    
+          <!-- The dl tag is used to create a definition list -->
+          <!-- The dl tag creates a list of terms and their definitions -->
+          <!-- The dt tag is used to define a term -->
+          <dl>
+            <!-- The dd tag is used to define the definition of a term -->
+            <!-- Each dt tag is followed by one or more dd tags that provide the definition -->
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dt>JS</dt>
+            <dd>JavaScript</dd>
+          </dl>
+    
+        </section>
+  
+      </article>
       
-      <!-- The ul tag is used to create an unordered list -->
-      <!-- The ul tag creates a list of items that do not have a specific order -->
-      <!-- The items in the list are defined using the li tag -->
-      <ul>
-        <!-- The li tag is used to define list items -->
-        <!-- Each li tag represents an item in the list -->
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>
-      
-      <!-- Ordered list -->
-      <h3>Ordered List</h3>
-
-      <!-- The ol tag is used to create an ordered list -->
-      <!-- The ol tag creates a list of items that have a specific order -->
-      <!-- The items in the list are defined using the li tag -->
-      <ol>
-        <li>First item</li>
-        <li>Second item</li>
-        <li>Third item</li>
-      </ol>
-
-      <!-- Definition list -->
-      <h3>Definition List</h3>
-
-      <!-- The dl tag is used to create a definition list -->
-      <!-- The dl tag creates a list of terms and their definitions -->
-      <!-- The dt tag is used to define a term -->
-      <dl>
-        <!-- The dd tag is used to define the definition of a term -->
-        <!-- Each dt tag is followed by one or more dd tags that provide the definition -->
-        <dt>HTML</dt>
-        <dd>HyperText Markup Language</dd>
-        <dt>CSS</dt>
-        <dd>Cascading Style Sheets</dd>
-        <dt>JS</dt>
-        <dd>JavaScript</dd>
-      </dl>
-
-    </section>
-    <hr>
-
-    <section id="elements">    
-      
-      <!-- Block level elements -->
-      <h2>Block level elements:</h2>
-
-      <!-- Block level elements take up the full width available -->
-      <!-- They start on a new line and create a "block" of content -->
-      <p>Here are some Block level elements:</p>
-      <ul>
-        <li>Paragraphs (p)</li>
-        <li>Headings (h1, h2, h3, etc.)</li>
-        <li>div</li>
-        <li>Lists (ul, ol, dl)</li>
-        <li>Horizontal Rule (hr)</li>
-        <li>Form</li>
-        <li>Table</li>
-        <li>Section</li>
-        <li>Article</li>
-        <li>Aside</li>
-        <li>Nav</li>
-        <li>Header</li>
-        <li>Footer</li>
-        <li>Address</li>
-      </ul>
-
-      <!-- Inline elements -->
-      <h2>Inline elements:</h2>
-
-      <!-- Inline elements do not start on a new line -->
-      <!-- They only take up as much width as necessary -->
-      <!-- They can be nested inside block level elements -->
-      <p>Here are some Inline elements:</p>
-      <ul>
-        <li>Span (span)</li>
-        <li>Anchor (a)</li>
-        <li>Image (img)</li>
-        <li>Strong (strong)</li>
-        <li>Emphasis (em)</li>  
-        <li>Bold (b)</li>
-        <li>Italic (i)</li>
-        <li>Subscript (sub)</li>
-        <li>Superscript (sup)</li>
-        <li>Quote (q)</li>
-        <li>Break (br)</li>
-        <li>Small (small)</li>
-        <li>Time (time)</li>
-        <li>Label (label)</li>
-        <li>Input (input)</li>
-        <li>Button (button)</li>
-        <li>Textarea (textarea)</li>
-        <li>Select (select)</li>
-      </ul>
-
       <hr>
+  
+      <article id="elements">    
+        
+        <section>
 
-      <section id="entities">    
+          <!-- Block level elements -->
+          <h2>Block level elements:</h2>
+    
+          <!-- Block level elements take up the full width available -->
+          <!-- They start on a new line and create a "block" of content -->
+          <p>Here are some Block level elements:</p>
+          <ul>
+            <li>Paragraphs (p)</li>
+            <li>Headings (h1, h2, h3, etc.)</li>
+            <li>div</li>
+            <li>Lists (ul, ol, dl)</li>
+            <li>Horizontal Rule (hr)</li>
+            <li>Form</li>
+            <li>Table</li>
+            <li>Section</li>
+            <li>Article</li>
+            <li>Aside</li>
+            <li>Nav</li>
+            <li>Header</li>
+            <li>Footer</li>
+            <li>Address</li>
+          </ul>
+        </section>
+  
+        <section>
+
+          <!-- Inline elements -->
+          <h2>Inline elements:</h2>
+    
+          <!-- Inline elements do not start on a new line -->
+          <!-- They only take up as much width as necessary -->
+          <!-- They can be nested inside block level elements -->
+          <p>Here are some Inline elements:</p>
+          <ul>
+            <li>Span (span)</li>
+            <li>Anchor (a)</li>
+            <li>Image (img)</li>
+            <li>Strong (strong)</li>
+            <li>Emphasis (em)</li>  
+            <li>Bold (b)</li>
+            <li>Italic (i)</li>
+            <li>Subscript (sub)</li>
+            <li>Superscript (sup)</li>
+            <li>Quote (q)</li>
+            <li>Break (br)</li>
+            <li>Small (small)</li>
+            <li>Time (time)</li>
+            <li>Label (label)</li>
+            <li>Input (input)</li>
+            <li>Button (button)</li>
+            <li>Textarea (textarea)</li>
+            <li>Select (select)</li>
+          </ul>
+        </section>
+
+        <!-- Aside section -->
+        <!-- The aside tag is used to define content that is related to the main content but is not essential -->
+        <!-- It is often used for sidebars, pull quotes, or additional information -->
+        <aside>
+        
+          <!-- The details tag is used to create a disclosure widget from which the user can obtain additional information -->
+          <!-- The details tag can be used to create a collapsible section that can be expanded or collapsed -->
+          <details>
+                
+            <!-- The summary tag is used to provide a summary or heading for the details -->
+            <!-- It is often used to provide a brief description of the content within the details tag -->
+            <summary>Replacable Elements</summary>
+            <p>These are HTML elements whose content is replaced by an external resource. Their appearance and intrinsic
+              dimensions (like width and height) are determined by the resource they load, not by the CSS formatting model of
+              the document itself.</p>
+            <ul>
+              <li>Image (img)</li>
+              <li>Video (video)</li>
+              <li>Audio (audio)</li>
+              <li>Object (object)</li>
+              <li>Embed (embed)</li>
+              <li>IFrame (iframe)</li>
+            </ul>
+        
+          </details>
+        
+          <details>
+            <summary>Non-Replacable Elements</summary>
+            <p>These are HTML elements whose content is contained directly within the document itself, and their rendering is
+              entirely determined by the CSS formatting model and the text content/child elements they enclose.</p>
+            <ul>
+              <li>Paragraph (p)</li>
+              <li>Heading (h1, h2, h3, etc.)</li>
+              <li>Span (span)</li>
+              <li>Div (div)</li>
+              <li>List (ul, ol, dl)</li>
+            </ul>
+          </details>
+        
+        </aside>
+      </article>
+  
+      <hr>
+      
+      <section id="entities">
         <!-- HTML entities -->
         <h2>HTML Entities:</h2>
-
+      
         <!-- HTML entities are used to represent special characters that have a specific meaning in HTML -->
         <!-- They are used to display characters that would otherwise be interpreted as HTML code -->
         <p>Here are some HTML entities:</p>
@@ -274,77 +356,92 @@
           <li>&#39; - Single quote</li>
           <li>&copy; - Copyright</li>
         </ul>
+      
+      </section>
+      
+      <hr>
+  
+      <section id="anchor">
+  
+        <!-- anchor element -->
+        <h2>Anchor Element:</h2>
+  
+        <!-- The anchor element (a tag) is used to create hyperlinks -->
+        <!-- The href attribute specifies the URL of the page the link goes to -->
+        <!-- The target attribute specifies where to open the linked document -->
+        <!-- _blank: Opens the link in a new tab or window. -->
+        <!-- _self: Opens the link in the same frame as it was clicked (default). -->
+        <!-- _parent: Opens the link in the parent frame. -->
+        <!-- _top: Opens the link in the full body of the window. -->
+        <!-- The text between the opening and closing a tags is the clickable text for the link -->
+        <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+  
+        <!-- absolute URL -->
+        <h3>Absolute URL:</h3>
+  
+        <!-- An absolute URL includes the full path to the resource, including the protocol (http or https) -->
+        <!-- It specifies the complete address of the resource -->
+        <a href="https://www.example.com" target="_blank">Visit https://www.example.com</a>
+  
+        <!-- relative URL -->
+        <h3>Relative URL:</h3>
+        <!-- A relative URL is a partial URL that is relative to the current page's URL -->
+        <!-- A relative URL does not include the protocol or domain name -->
+        <!-- It specifies the path to the resource relative to the current page -->
+        <a href="about.html">Visit about.html</a>
+  
+        <!-- internal URL, anchor tag with id -->
+        <h3>Internal URL:</h3>
+        <!-- An internal URL is a link to another page within the same website -->
+        <!-- It is often used to navigate to different sections of the same page or to other pages within the same site -->
+        <!-- The href attribute can also be used to link to a specific section of the same page using an anchor tag -->
+        <a href="#">Go to top</a>
+  
+        <h3>Download Link</h3>
+        <!-- A download link is used to download a file instead of navigating to it -->
+        <!-- The download attribute specifies that the link should be treated as a download link -->
+        <a href="Icon.ico" download>Download Icon</a>
+  
+      </section>
 
-    </section>
+      <hr>
+  
+      <section id="image">
+        <!-- Image element -->
+        <h2>Image Element:</h2>
+  
+        <!-- figure element -->
+        <!-- The figure tag is used to group an image and its caption together -->
+        <figure>
+          <!-- The img tag is used to embed images in the web page -->
+          <!-- The src attribute specifies the URL of the image -->
+          <!-- The alt attribute provides alternative text for the image, which is displayed if the image cannot be loaded -->
+          <!-- It is also used by screen readers for accessibility -->
+          <!-- The title attribute provides additional information about the image, which is displayed as a tooltip when hovering over the image -->
+          <!-- The width and height attributes specify the dimensions of the image in pixels -->
+          <!-- The loading attribute is used to control the loading behavior of the image -->
+          <!-- lazy: The image will be loaded when it is near the viewport, improving page load performance -->
+          <!-- eager: The image will be loaded immediately, regardless of its position in the viewport. This is the default behavior -->
+          <img src="Icon.ico" alt="html5 logo" title="html5" width="300" height="300" loading="lazy">
+  
+          <!-- The figcaption tag is used to provide a caption for the image -->
+          <!-- It is often used to describe the image or provide additional context -->
+          <figcaption>HTML5 Logo</figcaption>
+        </figure>
+  
+      </section>
+
+    </main>
 
     <hr>
 
-    <section id="anchor">
+    <!-- Footer section -->
+    <!-- The footer tag is used to define the footer of the document -->
+    <!-- It is often used to group footer content like copyright information, links, etc. -->
+    <footer>
+      <p>&copy; 2025 Neeraj Pandey. All rights reserved.</p>
+      <p>Contact: <a href="mailto:neeraj@example.com">neeraj@example.com</a></p>
+    </footer>
 
-      <!-- anchor element -->
-      <h2>Anchor Element:</h2>
-
-      <!-- The anchor element (a tag) is used to create hyperlinks -->
-      <!-- The href attribute specifies the URL of the page the link goes to -->
-      <!-- The target attribute specifies where to open the linked document -->
-      <!-- _blank: Opens the link in a new tab or window. -->
-      <!-- _self: Opens the link in the same frame as it was clicked (default). -->
-      <!-- _parent: Opens the link in the parent frame. -->
-      <!-- _top: Opens the link in the full body of the window. -->
-      <!-- The text between the opening and closing a tags is the clickable text for the link -->
-      <a href="https://www.example.com" target="_blank">Visit Example.com</a>
-
-      <!-- absolute URL -->
-      <h3>Absolute URL:</h3>
-
-      <!-- An absolute URL includes the full path to the resource, including the protocol (http or https) -->
-      <!-- It specifies the complete address of the resource -->
-      <a href="https://www.example.com" target="_blank">Visit https://www.example.com</a>
-
-      <!-- relative URL -->
-      <h3>Relative URL:</h3>
-      <!-- A relative URL is a partial URL that is relative to the current page's URL -->
-      <!-- A relative URL does not include the protocol or domain name -->
-      <!-- It specifies the path to the resource relative to the current page -->
-      <a href="about.html">Visit about.html</a>
-
-      <!-- internal URL, anchor tag with id -->
-      <h3>Internal URL:</h3>
-      <!-- An internal URL is a link to another page within the same website -->
-      <!-- It is often used to navigate to different sections of the same page or to other pages within the same site -->
-      <!-- The href attribute can also be used to link to a specific section of the same page using an anchor tag -->
-      <a href="#">Go to top</a>
-
-      <h3>Download Link</h3>
-      <!-- A download link is used to download a file instead of navigating to it -->
-      <!-- The download attribute specifies that the link should be treated as a download link -->
-      <a href="Icon.ico" download>Download Icon</a>
-
-    </section>
-
-    <section id="image">
-      <!-- Image element -->
-      <h2>Image Element:</h2>
-
-      <!-- figure element -->
-      <!-- The figure tag is used to group an image and its caption together -->
-      <figure>
-        <!-- The img tag is used to embed images in the web page -->
-        <!-- The src attribute specifies the URL of the image -->
-        <!-- The alt attribute provides alternative text for the image, which is displayed if the image cannot be loaded -->
-        <!-- It is also used by screen readers for accessibility -->
-        <!-- The title attribute provides additional information about the image, which is displayed as a tooltip when hovering over the image -->
-        <!-- The width and height attributes specify the dimensions of the image in pixels -->
-        <!-- The loading attribute is used to control the loading behavior of the image -->
-        <!-- lazy: The image will be loaded when it is near the viewport, improving page load performance -->
-        <!-- eager: The image will be loaded immediately, regardless of its position in the viewport. This is the default behavior -->
-        <img src="Icon.ico" alt="html5 logo" title="html5" width="300" height="300" loading="lazy">
-
-        <!-- The figcaption tag is used to provide a caption for the image -->
-        <!-- It is often used to describe the image or provide additional context -->
-        <figcaption>HTML5 Logo</figcaption>
-      </figure>
-
-    </section>
   </body>
 </html>
