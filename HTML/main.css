@@ -18,3 +18,9 @@ a:hover {
 a:visited, a:active {
   color: #8a2be2;
 }
+
+table, th, td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  padding: 8px;
+}
