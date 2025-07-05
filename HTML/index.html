@@ -652,6 +652,66 @@
 
       </article>
 
+      <article id="video">
+      
+        <h2>Video Element</h2>
+      
+        <!-- The video tag is used to embed a video in the web page -->
+        <!-- The video tag supports various video formats like MP4, WebM, and Ogg -->
+        <!-- The video tag can also include multiple source elements to provide different video formats for better compatibility -->
+        <!-- The src attribute specifies the URL of the video file -->
+        <!-- The controls attribute adds playback controls like play, pause, volume, etc. -->
+        <!-- The width and height attributes specify the dimensions of the video player -->
+        <!-- The poster attribute specifies an image to be shown while the video is downloading or until the user hits the play button -->
+        <!-- The preload attribute specifies how the video should be loaded when the page loads -->
+        <!-- none: The video will not be preloaded.
+                   metadata: The video will be preloaded only to retrieve metadata (like duration and dimensions).
+                   auto: The video will be preloaded completely. -->
+        <video src="sample.mp4" controls width="640" height="360" poster="Icon.ico" preload="metadata">
+
+          <!-- track elements are used to specify text tracks for the video -->
+          <!-- The kind attribute specifies the type of text track -->
+          <!-- subtitles: Provides subtitles for the video.
+               captions: Provides captions for the video, including descriptions of non-speech elements.
+               descriptions: Provides audio descriptions for the video, describing visual elements for visually impaired users.
+               chapters: Provides chapter titles for the video.
+               metadata: Provides metadata about the video. -->
+          <track kind="subtitles" src="sample-en.vtt" srclang="en" label="English Subtitles" default>
+          <track kind="descriptions" src="sample-desc.vtt" srclang="en" label="English Descriptions">
+          Your browser does not support the video tag.
+        </video>
+      
+      </article>
+
+      <hr>
+      
+      <article id="audio">
+      
+        <h2>Audio Element</h2>
+      
+        <!-- The audio tag is used to embed audio content in the web page -->
+        <!-- The src attribute specifies the URL of the audio file -->
+        <!-- The controls attribute adds playback controls like play, pause, volume, etc. -->
+        <!-- The preload attribute specifies how the audio should be loaded when the page loads -->
+        <audio src="sample.mp3" controls preload="metadata">
+          Your browser does not support the audio tag.
+        </audio>
+      
+      </article>
+
+      <article id="iframe">
+
+        <h2>Iframe Element</h2>
+
+        <!-- The iframe tag is used to embed another HTML page within the current page -->
+        <!-- The src attribute specifies the URL of the page to embed -->
+        <!-- The width and height attributes specify the dimensions of the iframe -->
+        <iframe title="Example Iframe" src="https://www.example.com" width="600" height="400">
+          Your browser does not support iframes.
+        </iframe>
+
+      </article>
+
     </main>
 
     <hr>
