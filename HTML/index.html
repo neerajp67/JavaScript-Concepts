@@ -652,6 +652,43 @@
 
       </article>
 
+      <article id="video">
+      
+        <h2>Video Element</h2>
+      
+        <!-- The video tag is used to embed a video in the web page -->
+        <!-- The video tag supports various video formats like MP4, WebM, and Ogg -->
+        <!-- The video tag can also include multiple source elements to provide different video formats for better compatibility -->
+        <!-- The src attribute specifies the URL of the video file -->
+        <!-- The controls attribute adds playback controls like play, pause, volume, etc. -->
+        <!-- The width and height attributes specify the dimensions of the video player -->
+        <!-- The poster attribute specifies an image to be shown while the video is downloading or until the user hits the play button -->
+        <!-- The preload attribute specifies how the video should be loaded when the page loads -->
+        <!-- none: The video will not be preloaded.
+                   metadata: The video will be preloaded only to retrieve metadata (like duration and dimensions).
+                   auto: The video will be preloaded completely. -->
+        <video src="sample.mp4" controls width="640" height="360" poster="Icon.ico" preload="metadata">
+          Your browser does not support the video tag.
+        </video>
+      
+      </article>
+
+      <hr>
+      
+      <article id="audio">
+      
+        <h2>Audio Element</h2>
+      
+        <!-- The audio tag is used to embed audio content in the web page -->
+        <!-- The src attribute specifies the URL of the audio file -->
+        <!-- The controls attribute adds playback controls like play, pause, volume, etc. -->
+        <!-- The preload attribute specifies how the audio should be loaded when the page loads -->
+        <audio src="sample.mp3" controls preload="metadata">
+          Your browser does not support the audio tag.
+        </audio>
+      
+      </article>
+
     </main>
 
     <hr>
