@@ -125,3 +125,24 @@ li:nth-child(14) {
 .dynamic-pseudo-classes:focus {
     color: lightcoral;
 }
+
+
+table {
+    border-collapse: collapse;
+    width: auto;
+}
+
+table caption {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 8px
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}

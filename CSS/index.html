@@ -45,8 +45,7 @@
 
     <hr>
 
-    <artcle id="selectors">
-
+    <article id="selectors">
         <h2>Type of Selectors</h2>
         <ul>
             <li>Universal Selector</li>
@@ -71,9 +70,54 @@
             <strong>Please comment/uncomment the specific CSS rules in the <code>style.css</code> file to see the
                 effects.</strong>
         </p>
-
     </article>
 
+    <hr>
+
+    <article id="CSS Specificity">
+        <h2>CSS Specificity</h2>
+        <p>CSS specificity determines which styles are applied to an element when there are conflicting styles.</p>
+        <p>It is calculated based on the types of selectors used in a rule:</p>
+        <ul>
+            <li>Inline styles have the highest specificity.</li>
+            <li>ID selectors have higher specificity than class selectors.</li>
+            <li>Class selectors have higher specificity than type selectors.</li>
+        </ul>
+        <p>For example, if an element has both a class and an ID selector applied, the styles from the ID selector
+            will take precedence.</p>
+        <p>If two selectors have the same specificity, the one that appears last in the CSS file will be applied.</p>
+        <p>To see the effects of specificity, you can modify the styles in the < code>style.css</code> file by
+                commenting or uncommenting specific rules.</p>
+
+        <table>
+            <caption>CSS Specificity</caption>
+            <thead>
+                <tr>
+                    <th>Selector Type</th>
+                    <th>Specificity Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inline styles</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>ID selectors</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Class selectors</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Type selectors</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </article>
 </body>
 
 </html>
