@@ -45,8 +45,7 @@
 
     <hr>
 
-    <artcle id="selectors">
-
+    <article id="selectors">
         <h2>Type of Selectors</h2>
         <ul>
             <li>Universal Selector</li>
@@ -71,6 +70,140 @@
             <strong>Please comment/uncomment the specific CSS rules in the <code>style.css</code> file to see the
                 effects.</strong>
         </p>
+    </article>
+
+    <hr>
+
+    <article id="CSS Specificity">
+        <h2>CSS Specificity</h2>
+
+        <section>
+            <h3>CSS Specificity - Theory</h3>
+            <p>CSS specificity determines which styles are applied to an element when there are conflicting styles.</p>
+            <p>It is calculated based on the types of selectors used in a rule:</p>
+            <ul>
+                <li>Inline styles have the highest specificity.</li>
+                <li>ID selectors have higher specificity than class selectors.</li>
+                <li>Class selectors have higher specificity than type selectors.</li>
+            </ul>
+            <p>For example, if an element has both a class and an ID selector applied, the styles from the ID selector
+                will take precedence.</p>
+            <p>If two selectors have the same specificity, the one that appears last in the CSS file will be applied.
+            </p>
+            <p>To see the effects of specificity, you can modify the styles in the < code>style.css</code> file by
+                    commenting or uncommenting specific rules.</p>
+
+            <table>
+                <caption>CSS Specificity</caption>
+                <thead>
+                    <tr>
+                        <th>Selector Type</th>
+                        <th>Specificity Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Inline styles</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>ID selectors</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Class selectors</td>
+                        <td>010</td>
+                    </tr>
+                    <tr>
+                        <td>Type selectors</td>
+                        <td>001</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>How to Calculate CSS Specificity</h3>
+            <p>To calculate the specificity of a CSS selector, you can use the following formula:</p>
+            <blockquote>
+                <em>Specificity = (Inline styles) + (ID selectors * 100) + (Class selectors * 10) + (Type selectors *
+                    1)</em>
+            </blockquote>
+            <p>For example, if a selector has 1 inline style, 2 ID selectors, 3 class selectors, and 1 type
+                selector, the specificity would be:</p>
+            <p><b>Specificity = 1000 + (2 * 100) + (3 * 10) + (1 * 1) = 1000 + 200 + 30 + 1 = 1231</b></p>
+            <p>In this case, the specificity value is 1231.</p>
+
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>CSS Specificity - Practice</h3>
+
+            <table>
+                <caption>CSS Specificity - Practice</caption>
+                <thead>
+                    <tr>
+                        <th>1st Selector Name</th>
+                        <th>2nd Selector Name</th>
+                        <th>Test text</th>
+                        <th>Winner</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color: green;">Inline <span class="specificity-span">Specificity: 1000</span></td>
+                        <td style="color: blue;">ID <span class="specificity-span">Specificity: 100</span></td>
+                        <td id="id-selector-practice" style="color: green;">Result</td>
+                        <td>Inline CSS Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Inline <span class="specificity-span">Specificity: 1000</span></td>
+                        <td style="color: blue;">Class <span class="specificity-span">Specificity: 010</span></td>
+                        <td class="class-selector-practice" style="color: green;">Result</td>
+                        <td>Inline CSS Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Inline <span class="specificity-span">Specificity: 1000</span></td>
+                        <td style="color: blue;">Element <span class="specificity-span">Specificity: 001</span></td>
+                        <td><span style="color: green;">Result</span></td>
+                        <td>Inline CSS Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">ID <span class="specificity-span">Specificity: 100</span></td>
+                        <td style="color: blue;">Class <span class="specificity-span">Specificity: 010</span></td>
+                        <td id="id-vs-class-practice" class="id-vs-class-practice">Result</td>
+                        <td>ID Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">ID <span class="specificity-span">Specificity: 100</span></td>
+                        <td style="color: blue;">Element <span class="specificity-span">Specificity: 001</span></td>
+                        <td><span id="id-vs-element-practice">Result</span></td>
+                        <td>ID Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Class <span class="specificity-span">Specificity: 010</span></td>
+                        <td style="color: blue;">Element <span class="specificity-span">Specificity: 001</span></td>
+                        <td><span class="class-vs-element-practice">Result</span></td>
+                        <td>Class Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Class <span class="specificity-span">Specificity: 010</span></td>
+                        <td style="color: blue;">Descendant Element Selector <span class="specificity-span">Specificity:
+                                002</span></td>
+                        <td><span class="class-vs-descendant-selector">Result</span></td>
+                        <td>Class Wins</td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Class <span class="specificity-span">Specificity: 010</span></td>
+                        <td style="color: blue;">Descendant Class Selector <span class="specificity-span">Specificity:
+                                011</span></td>
+                        <td><span class="class-vs-descendant-class-selector">Result</span></td>
+                        <td>Descendant Class Selector Wins</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
     </article>
 
