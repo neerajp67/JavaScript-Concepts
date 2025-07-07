@@ -121,6 +121,11 @@
                 </tbody>
             </table>
 
+        </section>
+
+        <hr>
+
+        <section>
             <h3>How to Calculate CSS Specificity</h3>
             <p>To calculate the specificity of a CSS selector, you can use the following formula:</p>
             <blockquote>
@@ -131,7 +136,6 @@
                 selector, the specificity would be:</p>
             <p><b>Specificity = 1000 + (2 * 100) + (3 * 10) + (1 * 1) = 1000 + 200 + 30 + 1 = 1231</b></p>
             <p>In this case, the specificity value is 1231.</p>
-
         </section>
 
         <hr>
@@ -205,6 +209,55 @@
             </table>
         </section>
 
+    </article>
+
+    <hr>
+
+    <article id="property-inheritance">
+        <h2>Property Inheritance</h2>
+        <p>In CSS, some properties are inherited by default, while others are not. Inherited properties are passed down
+            from parent elements to child elements.</p>
+        <p>For example, properties like <code>color</code>, <code>font-family</code>, and <code>line-height</code>
+            are typically inherited, meaning that if you set them on a parent element, child elements will
+            automatically receive those styles unless overridden.</p>
+        <p>On the other hand, properties like <code>margin</code>, <code>padding</code>, and <code>border</code>
+            are not inherited by default. If you want a child element to inherit these properties, you need to
+            explicitly set them on the child element.</p>
+
+        <ul>
+            <li>Inherited Properties:
+                <ul>
+                    <li><code>color</code></li>
+                    <li><code>font-family</code></li>
+                    <li><code>line-height</code></li>
+                    <li><code>font-size</code></li>
+                    <li><code>font-weight</code></li>
+                    <li><code>text-align</code></li>
+                    <li><code>text-decoration</code></li>
+                    <li><code>text-transform</code></li>
+                    <li><code>white-space</code></li>
+                    <li><code>visibility</code></li>
+                    <li><code>list-style</code></li>
+                    <li><code>quotes</code></li>
+                    <li><code>cursor</code></li>
+                    <li><code>direction</code></li>
+                    <li><code>font-style</code></li>
+                    <li><code>text-indent</code></li>
+                    <li><code>text-shadow</code></li>
+                </ul>
+            </li>
+            <li>Non-Inherited Properties:
+                <ul>
+                    <li><code>margin</code></li>
+                    <li><code>padding</code></li>
+                    <li><code>border</code></li>
+                    <li><code>background</code></li>
+                    <li><code>width</code></li>
+                    <li><code>height</code></li>
+                    <li><code>display</code></li>
+                </ul>
+            </li>
+        </ul>
     </article>
 
 </body>
