@@ -1,0 +1,127 @@
+/* External CSS */
+/* External CSS is a separate CSS file that is linked to an HTML document. */
+/* It allows you to apply styles to multiple HTML documents by linking the same CSS file. */
+.external-css {
+    color: green;
+}
+
+/* Universal Selector */
+/* Universal Selector Selects all elements. */
+/* The universal selector is represented by an asterisk (*). It applies styles to all elements in the document. */
+/* For example, the following CSS will apply gray color to all elements: */
+* {
+    color: gray;
+}
+
+
+/* Type (Element) Selector */
+/* The type selector selects elements based on their tag name. It applies styles to all elements of that type. */
+/* The type selector is simply the name of the element without any prefix. */
+/* For example, the following CSS will apply red color to all <li> elements: */
+li {
+    color: red;
+}
+
+/* Class Selector */
+/* The class selector selects elements based on their class attribute. It applies styles to all elements with that class. */
+/* The class selector is represented by a period (.) followed by the class name. */
+/* For example, the following CSS will apply blue color to all elements with class "class-selector": */
+.class-selector {
+    color: blue;
+}
+
+/* ID Selector */
+/* The ID selector selects a single element based on its ID attribute. It applies styles to the element with that ID. */
+/* The ID selector is represented by a hash (#) followed by the ID name. */
+/* For example, the following CSS will apply purple color to the element with ID "id-selector": */
+#id-selector {
+    color: purple;
+}
+
+/* Attribute Selector */
+/* The attribute selector selects elements based on the presence or value of an attribute. */
+/* The attribute selector is represented by square brackets ([]) containing the attribute name or value. */
+/* For example, the following CSS will apply orange color to all elements with type attribute equal to "square": */
+[type="square"] {
+    color: orange;
+}
+
+/* Descendant Selector */
+/* The descendant selector selects elements that are descendants of a specified element. */
+/* It applies styles to elements that are nested within another element. */
+/* The descendant selector is represented by a space between two selectors. */
+/* For example, the following CSS will apply green color to all <li> elements that are descendants of a <ul> element: */
+ul .descendant-selector {
+    color: black;
+}
+
+/* Child Selector */
+/* The child selector selects elements that are direct children of a specified element. */
+/* It applies styles to elements that are immediate children of another element. */
+/* The child selector is represented by a greater-than sign (>) between two selectors. */
+/* For example, the following CSS will apply dark blue color to all <li> elements that are direct children of a <ul> element: */
+ul > .child-selector {
+    color: darkblue;
+}
+
+/* Adjacent Selector OR Sibling Selector */
+/* The adjacent selector selects an element that is immediately preceded by another specified element. */
+/* It applies styles to an element that comes directly after another element. */
+/* The adjacent selector is represented by a plus sign (+) between two selectors. */
+/* For example, the following CSS will apply dark red color to an element with class "adjacent-selector" that comes immediately after an element with class "child-selector": */
+.child-selector + .adjacent-selector {
+    color: darkred;
+}
+
+/* general sibling selector */
+/* The general sibling selector selects all elements that are siblings of a specified element. */
+/* It applies styles to elements that share the same parent as another specified element. */
+/* The general sibling selector is represented by a tilde (~) between two selectors. */
+/* For example, the following CSS will apply green color to all elements with class "general-sibling-selector" that are siblings of an <li> element: */
+li ~ .general-sibling-selector {
+    color: green;
+}
+
+/* pseudo classes */
+/* Pseudo-classes are used to define the special state of an element. */
+/* For example, the following CSS will apply burlywood color to an element with class "pseudo-classes" when it is hovered over: */
+.pseudo-classes:hover {
+    color: burlywood;
+}
+
+/* pseudo elements */
+/* Pseudo-elements are used to style a specific part of an element. */
+/* For example, the following CSS will apply green color to the first letter of an element with class "pseudo-elements": */
+.pseudo-elements::first-letter {
+    color: green;
+}
+
+/* group selector */
+/* The group selector allows you to apply the same styles to multiple selectors. */
+/* It is represented by a comma (,) separating multiple selectors. */
+.group-selector, .another-group-selector {
+    color: orange;
+}
+
+/* negation-pseudo-class */
+/* The negation pseudo-class allows you to select elements that do not match a specified selector. */
+/* It is represented by :not() syntax. */
+/* For example, the following CSS will apply mediumaquamarine color to all elements that do not have class "negation-pseudo-class": */
+/* commenting out, uncomment when needed */
+/* :not(.negation-pseudo-class) {
+    color: mediumaquamarine;
+} */
+
+/* structural-pseudo-classes */
+/* Structural pseudo-classes are used to style elements based on their position in the document tree. */
+/* For example, the following CSS will apply lightblue color to all <li> elements that are the 14th child of their parent: */
+li:nth-child(14) {
+    color: lightblue;
+}
+
+/* dynamic-pseudo-classes */
+/* Dynamic pseudo-classes are used to style elements based on user interaction or other dynamic changes. */
+/* For example, the following CSS will apply lightcoral color to all <li> elements when they are focused: */
+.dynamic-pseudo-classes:focus {
+    color: lightcoral;
+}

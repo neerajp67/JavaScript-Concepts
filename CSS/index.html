@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Practice</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .internal-css {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
 
     <h1>CSS Practice</h1>
-    <p>This is a simple HTML document to practice CSS.</p>
-        
+
+    <hr>
+
+    <article id="css-types">
+
+        <h2>Types of CSS</h2>
+        <ul>
+            <!--Inline CSS-->
+            <!-- Inline CSS is directly applied to the HTML element here-->
+            <li>Inline CSS <span style="color: blue;">(style applied directly to elements)</span></li>
+
+            <!--Internal  CSS-->
+            <!-- Internal CSS is defined within the style tag in the head section -->
+            <li>Internal CSS <span class="internal-css">(style defined within the <code>&lt;style&gt;</code> tag in
+                    head)</span></li>
+
+
+            <!--External CSS-->
+            <!-- External CSS is linked through the link tag in the head section -->
+            <li>External CSS <span class="external-css">(style defined in an external file)</span></li>
+        </ul>
+    </article>
+
+
+    <hr>
+
+    <artcle id="selectors">
+
+        <h2>Type of Selectors</h2>
+        <ul>
+            <li>Universal Selector</li>
+            <li>Type (Element) Selector</li>
+            <li class="class-selector">Class Selector</li>
+            <li id="id-selector">Id Selector</li>
+            <li type="square">Attribute Selector</li>
+            <li class="descendant-selector">Descendant Selector</li>
+            <li class="child-selector">Child Selector</li>
+            <li class="adjacent-selector">Adjacent Selector</li>
+            <li class="general-sibling-selector">General Sibling Selector</li>
+            <li class="pseudo-classes">Pseudo-classes</li>
+            <li class="pseudo-elements">Pseudo-elements</li>
+            <li class="group-selector">Group Selector</li>
+            <li class="another-group-selector">Another Group Selector</li>
+            <li class="negation-pseudo-class">Negation Pseudo-class</li>
+            <li class="structural-pseudo-classes">Structural Pseudo-classes</li>
+            <li><a href="#" class="dynamic-pseudo-classes">Dynamic Pseudo-classes</a></li>
+        </ul>
+
+        <p>Not able to see the effects?
+            <strong>Please comment/uncomment the specific CSS rules in the <code>style.css</code> file to see the
+                effects.</strong>
+        </p>
+
+    </article>
+
 </body>
+
 </html>
