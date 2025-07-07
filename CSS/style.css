@@ -146,3 +146,76 @@ th, td {
     padding: 8px;
     text-align: left;
 }
+
+
+/* CSS Specificity - Practice */
+
+span.specificity-span {
+    color: red
+}
+
+#id-selector-practice {
+    color: blue;
+}
+
+.class-selector-practice {
+    color: blue
+}
+
+span {
+    color: blue;
+}
+
+#id-vs-class-practice {
+    color: green;
+}
+.id-vs-class-practice {
+    color: blue;
+}
+
+#id-vs-element-practice {
+    color: green;
+}
+
+.class-vs-element-practice {
+    color: green
+}
+
+.class-vs-descendant-selector{
+    color: green;
+}
+
+td span {
+    color: blue;
+}
+
+.class-vs-descendant-class-selector {
+    color: green;
+}
+td .class-vs-descendant-class-selector {
+    color: blue;
+}
+
+/* css-functions */
+/* CSS functions allow you to perform calculations or transformations on values. */
+/* For example, the calc() function allows you to perform calculations with CSS values. */
+/* .dynamic-pseudo-classes {
+    width: calc(100% - 20px);
+} */
+
+/* css-variables */
+/* CSS variables allow you to define reusable values that can be used throughout your CSS. */
+/* :root {
+    --main-bg-color: lightblue;
+    --main-text-color: darkblue;
+} */
+
+/* media-queries */
+/* Media queries are used to apply styles based on the characteristics of the device viewport. */
+/* For example, the following CSS will apply styles only when the viewport width is 600px or less: */
+/* @media (max-width: 600px) {
+    .media-queries {
+        background-color: var(--main-bg-color);
+        color: var(--main-text-color);
+    }
+} */
