@@ -62,7 +62,7 @@ ul .descendant-selector {
 /* It applies styles to elements that are immediate children of another element. */
 /* The child selector is represented by a greater-than sign (>) between two selectors. */
 /* For example, the following CSS will apply dark blue color to all <li> elements that are direct children of a <ul> element: */
-ul > .child-selector {
+ul>.child-selector {
     color: darkblue;
 }
 
@@ -71,7 +71,7 @@ ul > .child-selector {
 /* It applies styles to an element that comes directly after another element. */
 /* The adjacent selector is represented by a plus sign (+) between two selectors. */
 /* For example, the following CSS will apply dark red color to an element with class "adjacent-selector" that comes immediately after an element with class "child-selector": */
-.child-selector + .adjacent-selector {
+.child-selector+.adjacent-selector {
     color: darkred;
 }
 
@@ -80,7 +80,7 @@ ul > .child-selector {
 /* It applies styles to elements that share the same parent as another specified element. */
 /* The general sibling selector is represented by a tilde (~) between two selectors. */
 /* For example, the following CSS will apply green color to all elements with class "general-sibling-selector" that are siblings of an <li> element: */
-li ~ .general-sibling-selector {
+li~.general-sibling-selector {
     color: green;
 }
 
@@ -101,7 +101,8 @@ li ~ .general-sibling-selector {
 /* group selector */
 /* The group selector allows you to apply the same styles to multiple selectors. */
 /* It is represented by a comma (,) separating multiple selectors. */
-.group-selector, .another-group-selector {
+.group-selector,
+.another-group-selector {
     color: orange;
 }
 
@@ -143,11 +144,14 @@ table caption {
     padding: 8px
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: left;
 }
@@ -176,6 +180,7 @@ span {
 #id-vs-class-practice {
     color: green;
 }
+
 .id-vs-class-practice {
     color: blue;
 }
@@ -188,7 +193,7 @@ span {
     color: green
 }
 
-.class-vs-descendant-selector{
+.class-vs-descendant-selector {
     color: green;
 }
 
@@ -199,8 +204,25 @@ td span {
 .class-vs-descendant-class-selector {
     color: green;
 }
+
 td .class-vs-descendant-class-selector {
     color: blue;
 }
 
 /* CSS Specificity - Practice End */
+
+/* CSS Display - Start*/
+
+.display-block {
+    background-color: lightblue;
+}
+
+.display-inline {
+    background-color: lightgreen;
+}
+
+.display-none {
+    display: none;
+}
+
+/* CSS Display - End */
