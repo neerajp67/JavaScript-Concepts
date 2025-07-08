@@ -385,7 +385,231 @@
                 may not be as flexible as other units.</p>
         </section>
 
+    </article>
+
+    <hr>
+
+    <article id="typography">
+        <h2>Typography</h2>
+        <p>Typography in CSS refers to the style and appearance of text on a web page. It includes font selection,
+            size, weight, line height, letter spacing, and more.</p>
+        <p>Key properties for typography include:</p>
+        <ul>
+            <li><code>font-family</code>: Specifies the font to be used.</li>
+            <li><code>font-size</code>: Sets the size of the font.</li>
+            <li><code>font-weight</code>: Defines the thickness of the font.</li>
+            <li><code>line-height</code>: Controls the space between lines of text.</li>
+            <li><code>letter-spacing</code>: Adjusts the space between characters.</li>
+            <li><code>text-align</code>: Sets the alignment of text (left, right, center, justify).</li>
+            <li><code>text-decoration</code>: Adds decoration to text (underline, overline, line-through).</li>
+            <li><code>text-transform</code>: Controls capitalization (uppercase, lowercase, capitalize).</li>
+        </ul>
+
+    </article>
+
+    <hr>
+
+    <article id="display">
+        <h2>Display</h2>
+        <p>The display property in CSS is used to control the layout of an element. It determines how an element is
+            displayed on the page and how it interacts with other elements.</p>
+        <p>Key values for the display property include:</p>
+        <ul>
+            <li><code>block</code>: The element is displayed as a block-level element, taking up the full width
+                available and starting on a new line.</li>
+            <li><code>inline</code>: The element is displayed as an inline element, meaning it does not start on a new
+                line and only takes up as much width as necessary.</li>
+            <li><code>inline-block</code>: The element is displayed as an inline-level block container, allowing it to
+                have width and height while still flowing with text.</li>
+            <li><code>flex</code>: The element is displayed as a flex container, allowing for flexible layouts and
+                alignment of child elements.</li>
+            <li><code>grid</code>: The element is displayed as a grid container, allowing for a two-dimensional layout
+                of child elements in rows and columns.</li>
+            <li><code>none</code>: The element is not displayed at all, and it does not take up any space in the layout.
+            </li>
+            <li><code>table</code>: The element is displayed as a table, allowing it to behave like a table element in
+                HTML.</li>
+            <li><code>table-row</code>: The element is displayed as a table row, allowing it to behave like a row in a
+                table.</li>
+            <li><code>table-cell</code>: The element is displayed as a table cell, allowing it to behave like a cell in
+                a table.</li>
+            <li><code>list-item</code>: The element is displayed as a list item, allowing it to behave like an item in a
+                list.</li>
+        </ul>
+
         <hr>
+
+        <section id="block">
+            <h3>display: block</h3>
+            <p>Block-level elements take up the full width available and start on a new line. They can have width and
+                height set.</p>
+            <p class="display-block">Example: This is a block-level element.</p>
+            <p class="display-block">Example: This is another block-level element, starts from new line</p>
+
+            <ul>
+                <li>Block elements can contain other block elements and inline elements.</li>
+                <li>They respect top and bottom margins, pushing other elements away.</li>
+                <li><code>width</code>, <code>height</code>: We can set specific width and height for block elements.
+                    If not set, they will take the full width of their parent container.</li>
+                <li><code>margin-top</code>, <code>margin-bottom</code>: We can set margin left, right, top, and
+                    bottom. The top and bottom margins will push surrounding elements away.</li>
+                <li><code>padding-top</code>, <code>padding-bottom</code>: We can set padding left, right, top, and
+                    bottom. The top and bottom padding will push the content inside the block element away from its
+                    edges.</li>
+                <li><code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> (for
+                    position): These positioning offsets are respected, allowing for precise placement of block-level
+                    elements.</li>
+                <li><code>float</code>: Applying float to a block element will change its computed display value to
+                    inline-block, allowing it to behave like an inline element in terms of layout, but it will still
+                    take up the full width available.</li>
+            </ul>
+
+            <h4> Some common block elements: </h4>
+            <ul>
+                <li><code>&lt;div&gt;</code></li>
+                <li><code>&lt;h1&gt; to &lt;h6&gt;</code></li>
+                <li><code>&lt;p&gt;</code></li>
+                <li><code>&lt;form&gt;</code></li>
+                <li><code>&lt;header&gt;</code></li>
+                <li><code>&lt;footer&gt;</code></li>
+                <li><code>&lt;section&gt;</code></li>
+                <li><code>&lt;article&gt;</code></li>
+                <li><code>&lt;aside&gt;</code></li>
+                <li><code>&lt;nav&gt;</code></li>
+                <li><code>&lt;main&gt;</code></li>
+                <li><code>&lt;ul&gt;</code> (unordered list)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="inline">
+            <h3>display: inline</h3>
+            <p>inline elements take up only as much width as necessary and do not start on a new line. They can have
+                width and
+                height set.</p>
+            <span class="display-inline">Example: This is a inline element.</span>
+            <span class="display-inline">Example: This is another inline element, starts from the same line</span>
+
+            <ul>
+                <li>Inline elements do not start on a new line.</li>
+                <li>Inline elements can be nested within block-level elements.</li>
+                <li><code>width</code>, <code>height</code>: We can not give inline elements a specific width and
+                    height. These properties are
+                    ignored. An inline element's width and height are determined solely by its content.</li>
+                <li><code>margin-top</code>, <code>margin-bottom</code>: We can set margin left and right, but not top
+                    and bottom.</li>
+                <li><code>padding-top</code>, <code>padding-bottom</code>: We can set padding left and right, but not
+                    top and bottom. While the padding is visually drawn, it does not affect the height of the line box
+                    or push surrounding content vertically. It might overlap adjacent lines.</li>
+                <li><code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> (for position): These
+                    positioning offsets are ignored unless the element's
+                    position property is set to something other than static (like relative, absolute, or fixed).</li>
+                <li><code>float</code>: Applying float to an inline element will implicitly change its computed display
+                    value to block, making it behave like a block-level element in terms of layout.</li>
+            </ul>
+
+            <h4> Some common inline elements: </h4>
+            <ul>
+                <li><code>&lt;span&gt;</code></li>
+                <li><code>&lt;a&gt;</code></li>
+                <li><code>&lt;strong&gt;</code></li>
+                <li><code>&lt;em&gt;</code></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="inline-block">
+            <h3>display: inline-block</h3>
+            <p>inline-block elements are similar to inline elements, but they can have width and height set. They
+                also respect top and bottom margins and padding.</p>
+
+            <ul>
+                <li>Inline-block elements do not start on a new line.</li>
+                <li>Inline-block elements can have width and height set.</li>
+                <li><code>margin</code>: We can set margin for all sides (top, right, bottom, left).</li>
+                <li><code>padding</code>: We can set padding for all sides (top, right, bottom, left).</li>
+                <li><code>float</code>: Applying float to an inline-block element will change its computed display
+                    value to block, making it behave like a block-level element in terms of layout.</li>
+            </ul>
+
+            <h4> Some common inline-block elements: </h4>
+            <ul>
+                <li><code>&lt;img&gt;</code></li>
+                <li><code>&lt;input&gt;</code></li>
+                <li><code>&lt;button&gt;</code></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="none">
+            <h3>display: none</h3>
+            <p>Elements with <code>display: none</code> are not rendered at all (they have no effect on layout); they are
+                completely removed from the document flow.</p>
+
+            <p>Example: <span class="display-none">This text will not be displayed.</span></p>
+            <ul>
+                <li>Elements with <code>display: none</code> do not take up any space in the layout.</li>
+                <li>They are not visible to users and do not affect the layout of other elements.</li>
+                <li>They can be toggled using JavaScript or CSS transitions to show/hide elements dynamically.</li>
+            </ul>
+        </section>
+
+        <section id="flex">
+            <h3>display: flex</h3>
+            <p>Flexbox is a layout model that allows elements to be aligned and distributed within a container. It provides
+                a more efficient way to lay out, align, and distribute space among items in a container, even when their
+                size is unknown or dynamic.</p>
+
+            <ul>
+                <li>Flex containers can be created by setting the <code>display</code> property to <code>flex</code> or
+                    <code>inline-flex</code>.</li>
+                <li>Flex items are the direct children of a flex container and can be manipulated using various flex
+                    properties.</li>
+                <li><code>flex-direction</code>: Defines the direction in which flex items are placed in the flex
+                    container (row, column, row-reverse, column-reverse).</li>
+                <li><code>justify-content</code>: Aligns flex items along the main axis (start, end, center, space-between,
+                    space-around).</li>
+                <li><code>align-items</code>: Aligns flex items along the cross axis (stretch, center, start, end,
+                    baseline).</li>
+                <li><code>flex-wrap</code>: Controls whether flex items should wrap onto multiple lines (nowrap, wrap,
+                    wrap-reverse).</li>
+            </ul>
+
+            <h4> Some common flex properties: </h4>
+            <ul>
+                <li><code>flex-grow</code>: Defines the ability for a flex item to grow if necessary.</li>
+                <li><code>flex-shrink</code>: Defines the ability for a flex item to shrink if necessary.</li>
+                <li><code>flex-basis</code>: Defines the default size of a flex item before space is distributed.</li>
+            </ul>
+        </section>
+
+        <section id="grid">
+            <h3>display: grid</h3>
+            <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex layouts using rows and
+                columns. It provides a powerful way to design responsive and flexible layouts.</p>
+
+            <ul>
+                <li>Grid containers can be created by setting the <code>display</code> property to <code>grid</code> or
+                    <code>inline-grid</code>.</li>
+                <li>Grid items are the direct children of a grid container and can be manipulated using various grid
+                    properties.</li>
+                <li><code>grid-template-columns</code>: Defines the number and size of columns in the grid.</li>
+                <li><code>grid-template-rows</code>: Defines the number and size of rows in the grid.</li>
+                <li><code>grid-gap</code>: Sets the gap between grid items (both row and column gaps).</li>
+                <li><code>grid-auto-flow</code>: Controls how auto-placed items are placed in the grid (row, column,
+                    dense).</li>
+            </ul>
+
+            <h4> Some common grid properties: </h4>
+            <ul>
+                <li><code>grid-column</code>: Specifies how many columns an item should span.</li>
+                <li><code>grid-row</code>: Specifies how many rows an item should span.</li>
+                <li><code>grid-area</code>: Defines a named area within the grid for placing items.</li>
+            </ul>
+        </section>
 
     </article>
 
