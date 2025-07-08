@@ -121,6 +121,11 @@
                 </tbody>
             </table>
 
+        </section>
+
+        <hr>
+
+        <section>
             <h3>How to Calculate CSS Specificity</h3>
             <p>To calculate the specificity of a CSS selector, you can use the following formula:</p>
             <blockquote>
@@ -131,7 +136,6 @@
                 selector, the specificity would be:</p>
             <p><b>Specificity = 1000 + (2 * 100) + (3 * 10) + (1 * 1) = 1000 + 200 + 30 + 1 = 1231</b></p>
             <p>In this case, the specificity value is 1231.</p>
-
         </section>
 
         <hr>
@@ -204,6 +208,184 @@
                 </tbody>
             </table>
         </section>
+
+    </article>
+
+    <hr>
+
+    <article id="property-inheritance">
+        <h2>Property Inheritance</h2>
+        <p>In CSS, some properties are inherited by default, while others are not. Inherited properties are passed down
+            from parent elements to child elements.</p>
+        <p>For example, properties like <code>color</code>, <code>font-family</code>, and <code>line-height</code>
+            are typically inherited, meaning that if you set them on a parent element, child elements will
+            automatically receive those styles unless overridden.</p>
+        <p>On the other hand, properties like <code>margin</code>, <code>padding</code>, and <code>border</code>
+            are not inherited by default. If you want a child element to inherit these properties, you need to
+            explicitly set them on the child element.</p>
+
+        <ul>
+            <li>Inherited Properties:
+                <ul>
+                    <li><code>color</code></li>
+                    <li><code>font-family</code></li>
+                    <li><code>line-height</code></li>
+                    <li><code>font-size</code></li>
+                    <li><code>font-weight</code></li>
+                    <li><code>text-align</code></li>
+                    <li><code>text-decoration</code></li>
+                    <li><code>text-transform</code></li>
+                    <li><code>white-space</code></li>
+                    <li><code>visibility</code></li>
+                    <li><code>list-style</code></li>
+                    <li><code>quotes</code></li>
+                    <li><code>cursor</code></li>
+                    <li><code>direction</code></li>
+                    <li><code>font-style</code></li>
+                    <li><code>text-indent</code></li>
+                    <li><code>text-shadow</code></li>
+                </ul>
+            </li>
+            <li>Non-Inherited Properties:
+                <ul>
+                    <li><code>margin</code></li>
+                    <li><code>padding</code></li>
+                    <li><code>border</code></li>
+                    <li><code>background</code></li>
+                    <li><code>width</code></li>
+                    <li><code>height</code></li>
+                    <li><code>display</code></li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+
+    <hr>
+
+    <article id="units">
+        <h2>CSS Units</h2>
+
+        <section id="css-units-types">
+            <h3>CSS Units Types</h3>
+            <p>CSS units are used to define the size of elements in CSS. They can be absolute or relative.</p>
+            <ul>
+                <li>Absolute Units: These units are fixed and do not change their computed value regardless of the
+                    screen size or resolution
+                    <ul>
+                        <li><code>px</code> (pixels)</li>
+                        <li><code>pt</code> (points)</li>
+                        <li><code>cm</code> (centimeters)</li>
+                        <li><code>mm</code> (millimeters)</li>
+                        <li><code>in</code> (inches)</li>
+                    </ul>
+                </li>
+                <li>Relative Units: These units are relative to something else (e.g., the parent element's font size,
+                    the root element's font size, or the viewport size). They are crucial for creating responsive and
+                    scalable designs.
+                    <ul>
+                        <li><code>em</code> (relative to the font-size of the element)</li>
+                        <li><code>rem</code> (relative to the font-size of the root element)</li>
+                        <li><code>%</code> (relative to the parent element)</li>
+                        <li><code>vw</code> (viewport width)</li>
+                        <li><code>vh</code> (viewport height)</li>
+                        <li><code>ch</code> (width of the "0" character in the element's font)</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="px">
+            <h3>px (pixels)</h3>
+            <p>Pixels are the most common unit for measuring length in CSS. They are absolute units and are not affected
+                by the user's font size settings.</p>
+            <p>Example: <span style="font-size: 22px;">This text is 22 pixels in size.</span></p>
+            <p>Note: Using pixels can lead to less flexible layouts, especially on different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="cm">
+            <h3>cm (centimeters)</h3>
+            <p>Centimeters are a unit of measurement commonly used in print media. They are absolute units and are not
+                affected by the user's font size settings.</p>
+            <p>Example: <span style="font-size: 1cm;">This text is 1 centimeters in size.</span></p>
+            <p>Note: Using centimeters can lead to less flexible layouts, especially on different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="em">
+            <h3>em (relative to the font-size of the element)</h3>
+            <p>Em is a relative unit that is based on the font size of the element itself. 1em is equal to the current
+                font size of the element.</p>
+            <p>Example: <span style="font-size: 2em;">This text is 2 times the size of its parent element's font size.
+                </span></p>
+            <p>Note: Using em can create flexible designs that adapt to different font sizes, but it may lead to
+                unexpected results if not used carefully.</p>
+        </section>
+
+        <hr>
+
+        <section id="rem">
+            <h3>rem (relative to the font-size of the root element)</h3>
+            <p>Rem is a relative unit that is based on the font size of the root element (usually the
+                <code>&lt;html&gt;</code>
+                element). 1rem is equal to the font size of the root element.
+            </p>
+            <p>Example: <span style="font-size: 2rem;">This text is 2 times the size of the root element's font size.
+                </span></p>
+            <p>Note: Using rem can create consistent designs across different elements, as it is based on a single
+                reference point.</p>
+        </section>
+
+        <hr>
+
+        <section id="percentage">
+            <h3>% (percentage, relative to the parent element's font size)</h3>
+            <p>Percentage is a relative unit that is based on the font size of the parent element. 100% is equal to the
+                current font size of the element's parent.</p>
+            <p>Example: <span style="font-size: 150%;">This text is 150% of its parent element's font size.</span></p>
+            <p>Note: Using percentage can create flexible designs that adapt to different font sizes, but it may lead to
+                unexpected results if not used carefully.</p>
+        </section>
+
+        <hr>
+
+        <section id="vw">
+            <h3>vw (viewport width)</h3>
+            <p>Viewport width is a relative unit that represents a percentage of the viewport's width. 1vw is equal
+                to 1% of the viewport's width.</p>
+            <p>Example: <span style="font-size: 2vw;">This text is 2% of the viewport's width.</span></p>
+            <p>Note: Using viewport units can create responsive designs that adapt to different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="vh">
+            <h3>vh (viewport height)</h3>
+            <p>Viewport height is a relative unit that represents a percentage of the viewport's height. 1vh is equal
+                to 1% of the viewport's height.</p>
+            <p>Example: <span style="font-size: 2vh;">This text is 2% of the viewport's height.</span></p>
+            <p>Note: Using viewport units can create responsive designs that adapt to different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="ch">
+            <h3>ch (character)</h3>
+            <p>Ch is a unit of measurement that is relative to the width of the "0" (zero) character in the
+                element's
+                font.
+            </p>
+            <p>Example: <span style="font-size: 5ch;">This text is 5 characters wide.</span></p>
+            <p>Note: Using ch can be useful for creating layouts that are based on the width of characters, but it
+                may not be as flexible as other units.</p>
+        </section>
+
+        <hr>
 
     </article>
 
