@@ -5,6 +5,8 @@
     color: green;
 }
 
+/* CSS Selectors Start*/
+
 /* Universal Selector */
 /* Universal Selector Selects all elements. */
 /* The universal selector is represented by an asterisk (*). It applies styles to all elements in the document. */
@@ -126,7 +128,10 @@ li:nth-child(14) {
     color: lightcoral;
 }
 
+/* CSS Selectors End*/
 
+
+/* Table Styles Start */
 table {
     border-collapse: collapse;
     width: auto;
@@ -147,8 +152,10 @@ th, td {
     text-align: left;
 }
 
+/* Table Styles End */
 
-/* CSS Specificity - Practice */
+
+/* CSS Specificity - Practice Start */
 
 span.specificity-span {
     color: red
@@ -196,26 +203,4 @@ td .class-vs-descendant-class-selector {
     color: blue;
 }
 
-/* css-functions */
-/* CSS functions allow you to perform calculations or transformations on values. */
-/* For example, the calc() function allows you to perform calculations with CSS values. */
-/* .dynamic-pseudo-classes {
-    width: calc(100% - 20px);
-} */
-
-/* css-variables */
-/* CSS variables allow you to define reusable values that can be used throughout your CSS. */
-/* :root {
-    --main-bg-color: lightblue;
-    --main-text-color: darkblue;
-} */
-
-/* media-queries */
-/* Media queries are used to apply styles based on the characteristics of the device viewport. */
-/* For example, the following CSS will apply styles only when the viewport width is 600px or less: */
-/* @media (max-width: 600px) {
-    .media-queries {
-        background-color: var(--main-bg-color);
-        color: var(--main-text-color);
-    }
-} */
+/* CSS Specificity - Practice End */

@@ -260,6 +260,135 @@
         </ul>
     </article>
 
+    <hr>
+
+    <article id="units">
+        <h2>CSS Units</h2>
+
+        <section id="css-units-types">
+            <h3>CSS Units Types</h3>
+            <p>CSS units are used to define the size of elements in CSS. They can be absolute or relative.</p>
+            <ul>
+                <li>Absolute Units: These units are fixed and do not change their computed value regardless of the
+                    screen size or resolution
+                    <ul>
+                        <li><code>px</code> (pixels)</li>
+                        <li><code>pt</code> (points)</li>
+                        <li><code>cm</code> (centimeters)</li>
+                        <li><code>mm</code> (millimeters)</li>
+                        <li><code>in</code> (inches)</li>
+                    </ul>
+                </li>
+                <li>Relative Units: These units are relative to something else (e.g., the parent element's font size,
+                    the root element's font size, or the viewport size). They are crucial for creating responsive and
+                    scalable designs.
+                    <ul>
+                        <li><code>em</code> (relative to the font-size of the element)</li>
+                        <li><code>rem</code> (relative to the font-size of the root element)</li>
+                        <li><code>%</code> (relative to the parent element)</li>
+                        <li><code>vw</code> (viewport width)</li>
+                        <li><code>vh</code> (viewport height)</li>
+                        <li><code>ch</code> (width of the "0" character in the element's font)</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="px">
+            <h3>px (pixels)</h3>
+            <p>Pixels are the most common unit for measuring length in CSS. They are absolute units and are not affected
+                by the user's font size settings.</p>
+            <p>Example: <span style="font-size: 22px;">This text is 22 pixels in size.</span></p>
+            <p>Note: Using pixels can lead to less flexible layouts, especially on different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="cm">
+            <h3>cm (centimeters)</h3>
+            <p>Centimeters are a unit of measurement commonly used in print media. They are absolute units and are not
+                affected by the user's font size settings.</p>
+            <p>Example: <span style="font-size: 1cm;">This text is 1 centimeters in size.</span></p>
+            <p>Note: Using centimeters can lead to less flexible layouts, especially on different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="em">
+            <h3>em (relative to the font-size of the element)</h3>
+            <p>Em is a relative unit that is based on the font size of the element itself. 1em is equal to the current
+                font size of the element.</p>
+            <p>Example: <span style="font-size: 2em;">This text is 2 times the size of its parent element's font size.
+                </span></p>
+            <p>Note: Using em can create flexible designs that adapt to different font sizes, but it may lead to
+                unexpected results if not used carefully.</p>
+        </section>
+
+        <hr>
+
+        <section id="rem">
+            <h3>rem (relative to the font-size of the root element)</h3>
+            <p>Rem is a relative unit that is based on the font size of the root element (usually the
+                <code>&lt;html&gt;</code>
+                element). 1rem is equal to the font size of the root element.
+            </p>
+            <p>Example: <span style="font-size: 2rem;">This text is 2 times the size of the root element's font size.
+                </span></p>
+            <p>Note: Using rem can create consistent designs across different elements, as it is based on a single
+                reference point.</p>
+        </section>
+
+        <hr>
+
+        <section id="percentage">
+            <h3>% (percentage, relative to the parent element's font size)</h3>
+            <p>Percentage is a relative unit that is based on the font size of the parent element. 100% is equal to the
+                current font size of the element's parent.</p>
+            <p>Example: <span style="font-size: 150%;">This text is 150% of its parent element's font size.</span></p>
+            <p>Note: Using percentage can create flexible designs that adapt to different font sizes, but it may lead to
+                unexpected results if not used carefully.</p>
+        </section>
+
+        <hr>
+
+        <section id="vw">
+            <h3>vw (viewport width)</h3>
+            <p>Viewport width is a relative unit that represents a percentage of the viewport's width. 1vw is equal
+                to 1% of the viewport's width.</p>
+            <p>Example: <span style="font-size: 2vw;">This text is 2% of the viewport's width.</span></p>
+            <p>Note: Using viewport units can create responsive designs that adapt to different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="vh">
+            <h3>vh (viewport height)</h3>
+            <p>Viewport height is a relative unit that represents a percentage of the viewport's height. 1vh is equal
+                to 1% of the viewport's height.</p>
+            <p>Example: <span style="font-size: 2vh;">This text is 2% of the viewport's height.</span></p>
+            <p>Note: Using viewport units can create responsive designs that adapt to different screen sizes.</p>
+        </section>
+
+        <hr>
+
+        <section id="ch">
+            <h3>ch (character)</h3>
+            <p>Ch is a unit of measurement that is relative to the width of the "0" (zero) character in the
+                element's
+                font.
+            </p>
+            <p>Example: <span style="font-size: 5ch;">This text is 5 characters wide.</span></p>
+            <p>Note: Using ch can be useful for creating layouts that are based on the width of characters, but it
+                may not be as flexible as other units.</p>
+        </section>
+
+        <hr>
+
+    </article>
+
 </body>
 
 </html>
