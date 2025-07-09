@@ -226,3 +226,117 @@ td .class-vs-descendant-class-selector {
 }
 
 /* CSS Display - End */
+
+/* CSS Positioning - Start */
+
+section#static {
+    background-color: rgb(215, 210, 210);
+    border: 1px solid black;
+    padding: 20px;
+}
+
+section#static h3, section#static p {
+    color: #000;
+}
+
+
+.static-position {
+    position: static;
+    color: #fff;
+    background-color: rgb(242, 109, 109);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+
+section#relative {
+    background-color: rgb(215, 210, 210);
+    border: 1px solid black;
+    padding: 20px;
+}
+
+section#relative h3, section#relative p {
+    color: #000;
+}
+
+
+.relative-position {
+    position: relative;
+    color: #fff;
+    background-color: rgb(93, 87, 87);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    top: 20px; 
+    left: 100px;
+}
+
+section#absolute {
+    position: relative; /* for testing absolute positioning in this section */
+    background-color: rgb(77, 42, 42);
+    border: 1px solid black;
+    padding: 20px;
+}
+
+section#absolute h3, section#absolute p {
+    color: #fff;
+}
+
+
+.absolute-position {
+    position: absolute;
+    color: #000;
+    background-color: rgb(222, 195, 195);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    bottom: 100px;
+    right: 0px;
+}
+
+section#fixed {
+    background-color: rgb(176, 192, 232);
+    border: 1px solid black;
+    padding: 20px;
+}
+
+section#fixed h3, section#fixed p {
+    color: #fff;
+}
+
+
+.fixed-position {
+    position: fixed;
+    color: #000;
+    background-color: rgb(149, 208, 215);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+}
+
+section#sticky {
+    background-color: rgb(176, 192, 232);
+    border: 1px solid black;
+    padding: 20px;
+}
+
+section#sticky h3, section#sticky p {
+    color: #fff;
+}
+
+
+.sticky-position {
+    position: sticky;
+    color: #fff;
+    background-color: rgb(48, 128, 136);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+}
+
+/* CSS Positioning - End */

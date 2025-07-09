@@ -546,7 +546,8 @@
 
         <section id="none">
             <h3>display: none</h3>
-            <p>Elements with <code>display: none</code> are not rendered at all (they have no effect on layout); they are
+            <p>Elements with <code>display: none</code> are not rendered at all (they have no effect on layout); they
+                are
                 completely removed from the document flow.</p>
 
             <p>Example: <span class="display-none">This text will not be displayed.</span></p>
@@ -559,18 +560,21 @@
 
         <section id="flex">
             <h3>display: flex</h3>
-            <p>Flexbox is a layout model that allows elements to be aligned and distributed within a container. It provides
+            <p>Flexbox is a layout model that allows elements to be aligned and distributed within a container. It
+                provides
                 a more efficient way to lay out, align, and distribute space among items in a container, even when their
                 size is unknown or dynamic.</p>
 
             <ul>
                 <li>Flex containers can be created by setting the <code>display</code> property to <code>flex</code> or
-                    <code>inline-flex</code>.</li>
+                    <code>inline-flex</code>.
+                </li>
                 <li>Flex items are the direct children of a flex container and can be manipulated using various flex
                     properties.</li>
                 <li><code>flex-direction</code>: Defines the direction in which flex items are placed in the flex
                     container (row, column, row-reverse, column-reverse).</li>
-                <li><code>justify-content</code>: Aligns flex items along the main axis (start, end, center, space-between,
+                <li><code>justify-content</code>: Aligns flex items along the main axis (start, end, center,
+                    space-between,
                     space-around).</li>
                 <li><code>align-items</code>: Aligns flex items along the cross axis (stretch, center, start, end,
                     baseline).</li>
@@ -588,12 +592,14 @@
 
         <section id="grid">
             <h3>display: grid</h3>
-            <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex layouts using rows and
+            <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex layouts using rows
+                and
                 columns. It provides a powerful way to design responsive and flexible layouts.</p>
 
             <ul>
                 <li>Grid containers can be created by setting the <code>display</code> property to <code>grid</code> or
-                    <code>inline-grid</code>.</li>
+                    <code>inline-grid</code>.
+                </li>
                 <li>Grid items are the direct children of a grid container and can be manipulated using various grid
                     properties.</li>
                 <li><code>grid-template-columns</code>: Defines the number and size of columns in the grid.</li>
@@ -611,6 +617,74 @@
             </ul>
         </section>
 
+    </article>
+
+    <article id="position">
+        <h2>CSS Positioning</h2>
+        <p>CSS positioning allows you to control the placement of elements on a web page. There are several positioning
+            schemes in CSS:</p>
+        <ul>
+            <li><code>static</code>: The default positioning scheme. Elements are positioned according to the normal
+                document flow. They are not affected by top, right, bottom, or left properties.</li>
+            <li><code>relative</code>: Elements are positioned relative to their normal position in the document flow.
+                The top, right, bottom, and left properties offset the element from its original position.</li>
+            <li><code>absolute</code>: Elements are positioned relative to the nearest positioned ancestor (an ancestor
+                with a position other than static). If there is no such ancestor, the element is positioned relative to
+                the initial containing block (usually the viewport).</li>
+            <li><code>fixed</code>: Elements are positioned relative to the viewport. They remain in the same position
+                even when the page is scrolled. The top, right, bottom, and left properties offset the element from the
+                viewport edges.</li>
+            <li><code>sticky</code>: Elements are positioned based on the user's scroll position. They behave like
+                relative elements until a specified scroll position is reached, at which point they become fixed.</li>
+        </ul>
+
+        <section id="static">
+            <h3>Static Positioning</h3>
+            <p>Static positioning is the default positioning scheme in CSS. Elements are positioned according to the
+                normal document flow, and they are not affected by the top, right, bottom, or left properties.</p>
+            <div class="static-position">
+                This text is positioned statically.
+            </div>
+        </section>
+
+        <section id="relative">
+            <h3>Relative Positioning</h3>
+            <p>Relative positioning allows you to position an element relative to its normal position in the document
+                flow.
+                The top, right, bottom, and left properties offset the element from its original position.</p>
+            <div class="relative-position">
+                This text is positioned relatively.
+            </div>
+        </section>
+
+        <section id="absolute">
+            <h3>Absolute Positioning</h3>
+            <p>Absolute positioning allows you to position an element relative to its nearest positioned ancestor (an
+                ancestor
+                with a position other than static). If there is no such ancestor, the element is positioned relative to
+                the initial containing block (usually the viewport).</p>
+            <div class="absolute-position">
+                This text is positioned absolutely.
+            </div>
+        </section>
+
+        <section id="fixed">
+            <h3>Fixed Positioning</h3>
+            <p>Fixed positioning allows you to position an element relative to the viewport. The element remains in the
+                same
+                position even when the page is scrolled.</p>
+            <div class="fixed-position">
+                This text is positioned fixed.
+            </div>
+        </section>
+
+        <section id="sticky">
+            <h3>Sticky Positioning</h3>
+            <p>Sticky positioning allows you to position an element based on the user's scroll position. The element behaves like a relative element until a specified scroll position is reached, at which point it becomes fixed.</p>
+            <div class="sticky-position">
+                This text is positioned sticky.
+            </div>
+        </section>
     </article>
 
 </body>
