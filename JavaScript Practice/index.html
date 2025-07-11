@@ -5,12 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Practice</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
 
 <body>
 
     <h1>Javascript Practice</h1>
+
+    <article id="how-js-works">
+
+        <section>
+            <h2>
+                How Javascript works
+            </h2>
+            <ol class="container">
+                <li> Loading & Parsing ==>
+                    <ol type="I">
+                        <li>
+                            Fetch Script: The browser first fetches the JavaScript file (or reads inline script)
+                            from the server.
+                        </li>
+                        <li>
+                            Parse Code: The JavaScript engine's Parser reads the raw code, tokenizes it (breaks it into
+                            meaningful pieces), and then constructs an Abstract Syntax Tree (AST). The AST is a
+                            tree-like representation of the code's structural integrity.
+                        </li>
+                    </ol>
+                </li>
+
+                <br>
+
+                <li> Compilation (Just-In-Time - JIT) ==>
+                    <ol type="I">
+                        <li>
+                            Interpreter/Compiler: Modern JS engines use a JIT compilation approach. An Interpreter
+                            quickly translates the AST into bytecode.
+                        </li>
+                        <li>
+                            Optimization: While the bytecode is running, a Profiler identifies "hot" (frequently
+                            executed) code. This hot code is then sent to an Optimizing Compiler (e.g., V8's TurboFan),
+                            which compiles it into highly optimized machine code for faster subsequent execution. If
+                            runtime
+                            assumptions break, it can de-optimize back to bytecode.
+                        </li>
+                    </ol>
+                </li>
+
+                <br>
+
+                <li> Execution Context Creation (Preparation Phase) ==>
+                    <ol type="I">
+                        <li> Before code execution, an Execution Context is created (first the Global Context, then
+                            Function Contexts for each function call).
+                        </li>
+                        <li> Memory Allocation (Hoisting):
+                            <ol type="i">
+                                <li>
+                                    For var declarations and function declarations, memory space is allocated, and they
+                                    are conceptually moved to the top of their scope ("hoisted"). var variables are
+                                    initialized to undefined.
+                                </li>
+                                <li>
+                                    let and const declarations are also hoisted but remain in a "Temporal Dead Zone"
+                                    (TDZ) until their actual line of declaration is executed.
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            this Binding: The value of the this keyword is determined and bound for that context.
+                        </li>
+                        <li>
+                            Lexical Environment: The engine sets up the "scope chain," defining how variables and
+                            functions are resolved.
+                        </li>
+                    </ol>
+                </li>
+
+                <br>
+
+                <li> Code Execution (Runtime Phase) ==>
+                    <ol type="I">
+                        <li>
+                            Call Stack: Execution contexts are pushed onto a Call Stack (LIFO - Last In, First Out).
+                            The code at the top of the stack is currently executing.
+                        </li>
+                        <li>
+                            Synchronous Code: JavaScript executes code synchronously, line by line, on a single main
+                            thread.
+                        </li>
+                        <li> Asynchronous Operations:
+                            <ol type="i">
+                                <li>
+                                    When an asynchronous operation (like setTimeout, fetch, DOM events) is encountered,
+                                    it's handed off to Web APIs (browser-provided features). The main thread does not
+                                    wait
+                                    for these to complete.
+                                </li>
+                                <li>
+                                    Once a Web API task finishes, its associated callback function is moved to the
+                                    Callback Queue (also known as the Task Queue).
+                                </li>
+                                <li>
+                                    Event Loop: The Event Loop constantly monitors the Call Stack. If the Call Stack is
+                                    empty, it takes the first callback from the Callback Queue and pushes it onto the
+                                    Call
+                                    Stack for execution. This mechanism enables non-blocking I/O and concurrency in
+                                    single-threaded JavaScript.
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+
+                <br>
+
+                <li> Memory Management ==> </li>
+                <ol type="I">
+                    <li>
+                        Garbage Collection: The JavaScript engine includes a Garbage Collector that automatically
+                        identifies and reclaims memory occupied by objects that are no longer reachable or needed by the
+                        program, preventing memory leaks.
+                    </li>
+                    <li>Context Popping: When an execution context finishes its code execution, it's popped off the Call
+                        Stack, and its associated memory is then eligible for garbage collection.
+                    </li>
+                </ol>
+            </ol>
+        </section>
+
+    </article>
 
 </body>
 
