@@ -1,3 +1,5 @@
+import data from './data.js'
+
 /*< -- How Javascript works -- > */
 
 // 1. Loading & Parsing ==>
@@ -12,7 +14,7 @@
 */
 
 // 3. Execution Context Creation (Preparation Phase) ==>
-/*  3.1.  Before code execution, an Execution Context is created (first the Global Context, then Function Contexts for each function call). 
+/*  3.1.Before code execution, an Execution Context is created (first the Global Context, then Function Contexts for each function call). 
     3.2 Memory Allocation (Hoisting):
         3.2.1 For var declarations and function declarations, memory space is allocated, and they are conceptually moved to the top of their scope ("hoisted"). var variables are initialized to undefined.
         3.2.2 let and const declarations are also hoisted but remain in a "Temporal Dead Zone" (TDZ) until their actual line of declaration is executed.
@@ -33,3 +35,20 @@
 /*  5.1 Garbage Collection: The JavaScript engine includes a Garbage Collector that automatically identifies and reclaims memory occupied by objects that are no longer reachable or needed by the program, preventing memory leaks.
     5.2 Context Popping: When an execution context finishes its code execution, it's popped off the Call Stack, and its associated memory is then eligible for garbage collection.
 */
+
+const tBody = document.getElementById("js-concept-body");
+console.log(tBody);
+
+
+let row = ''
+for (let item of data) {
+    row += `
+    <tr>
+    <td>${item.topic}</td>
+    <td>${item.level}</td>
+    <td>${item.description}</td>
+    <td>${item.example}</td>
+    </tr>
+    `
+}
+tBody.innerHTML = row;
