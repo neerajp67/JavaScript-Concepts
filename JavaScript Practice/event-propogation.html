@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Bubbling and Capturing Example</title>
+<style>
+  body * {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  .outer { background-color: lightblue; }
+  .middle { background-color: lightgreen; }
+  .inner { background-color: lightcoral; }
+</style>
+</head>
+<body>
+
+  <div class="outer">Outer Div
+    <div class="middle">Middle Div
+      <div class="inner">Inner Div</div>
+    </div>
+  </div>
+
+<script>
+  // Get references to the elements
+  const outerDiv = document.querySelector('.outer');
+  const middleDiv = document.querySelector('.middle');
+  const innerDiv = document.querySelector('.inner');
+
+    // --- BUBBLING PHASE LISTENERS (third argument is false or omitted) ---
+  outerDiv.addEventListener('click', () => {
+    console.log('Bubbling: Outer Div');
+  }, false); // false or omit for bubbling
+
+  middleDiv.addEventListener('click', () => {
+    console.log('Bubbling: Middle Div');
+  }, false); // false or omit for bubbling
+
+  innerDiv.addEventListener('click', () => {
+    console.log('Bubbling: Inner Div');
+  }, false); // false or omit for bubbling
+  
+  // --- CAPTURING PHASE LISTENERS (third argument is true) ---
+  outerDiv.addEventListener('click', () => {
+    console.log('Capturing: Outer Div');
+  }, true); // true for capturing
+
+  middleDiv.addEventListener('click', () => {
+    console.log('Capturing: Middle Div');
+  }, true); // true for capturing
+
+  innerDiv.addEventListener('click', () => {
+    console.log('Capturing: Inner Div');
+  }, true); // true for capturing
+
+
+
+
+</script>
+</body>
+</html>
