@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Object</title>
+</head>
+
+<body>
+
+    <pre>
+        original object:
+        {
+            name: 'neeraj', 
+            address: {
+                local: {
+                    city: 'Pithoragarh',
+                    area: 'Gurura'
+                },
+                 present: {
+                    city: 'Nagpur',
+                    area: 'Mihan'
+                }
+            }
+        } 
+    </pre>
+
+    <pre>
+        final object should be in this format:
+        {
+            user_name: 'neeraj', 
+            user_address_local_city: 'Pithoragarh',
+            user_address_local_area: 'Gurura'
+            user_address_present_city: 'Nagpur',
+            user_address_present_area: 'Mihan'
+        } 
+    </pre>
+
+    <script>
+        let user = {
+            name: 'neeraj',
+            address: {
+                local: {
+                    city: 'Pithoragarh',
+                    area: 'Gurura'
+                },
+                present: {
+                    city: 'Nagpur',
+                    area: 'Mihan'
+                }
+            }
+        }
+
+        let flatUser = {}
+
+        let flatObject = (user, parent) => {
+            for (let key in user) {
+                if (typeof user[key] === 'object') {
+                    flatObject(user[key], `${parent}_${key}`)
+                } else {
+                    flatUser[`${parent}_${key}`] = user[key];
+                }
+            }
+        }
+
+        flatObject(user, 'user');
+        console.log(flatUser);
+    </script>
+</body>
+
+</html>

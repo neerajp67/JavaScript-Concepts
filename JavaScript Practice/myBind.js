@@ -1,4 +1,4 @@
-// Implementation of bind ==>
+// Implementation of custome bind method==>
 
 // Object to be used in our example
 const person = {
