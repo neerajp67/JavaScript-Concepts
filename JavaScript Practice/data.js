@@ -2,152 +2,234 @@
 export default [
     {
         "topic": "How JavaScript Works",
-        "level": "simple",
-        "description": "Explain from loading the JS file into browser, parsing, Compilation, Execution Context, Memory allocation (hoiesting), Call State, laxicle environment, Memory Management (garbage collector) ",
-        "example": "N/A"
+        "level": "",
+        "description": "Explain from loading the JS file into browser, parsing, Compilation, Execution Context, Memory allocation (hoisiting), Call State, laxicle environment, Memory Management (garbage collector) ",
+        "example": ""
     },
     {
         "topic": "Execution Context",
-        "level": "simple",
+        "level": "",
         "description": "Explain Variable Environment (Memory), Lexical Environment, this",
-        "example": "N/A"
+        "example": ""
     },
     {
         "topic": "Lexical Environment",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Call Stack",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Hoisiting",
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Scope",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Scope Chain",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Temporal Dead Zone",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Shadowing",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Closure",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Module Design Pattern",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Currying",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Function like Once",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Memoize",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Generator Function",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Constructor Function",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Anonymous Function",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Function Statement/Declaration",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Function Expression",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Names Function Expression",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "First Class Functions",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
-        "topic": "Higher Order Class Functions",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "topic": "Higher Order Functions",
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Arrow Functions",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Parameter vs Argument",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Event Loop",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
     },
     {
         "topic": "Web APIs",
-        "level": "simple",
-        "description": "Test3",
-        "example": "test3"
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Prototype",
+        "level": "",
+        "description": `What is Prototype?
+        What is Prototypal Inheritance?
+        What is Prototype Chain?
+        Why we call it _proto_ ?
+        What is inhertance in Javascript?`,
+        "example": ""
+    },
+    {
+        "topic": "this",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "call(), bind() and apply()",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Event Bubbling and Capturing",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Polyfill",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Async and Defer to load a script",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Promise",
+        "level": "",
+        "description": "Promise.all(),Promise.settleAll(), Promise.race(), Promise.any() ",
+        "example": ""
+    },
+    {
+        "topic": "Async Await",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Array methods",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Object methods",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Spread and Rest Operators",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Destructuring",
+        "level": "",
+        "description": "",
+        "example": ""
     },
 ]
