@@ -209,13 +209,43 @@ export default [
         "example": ""
     },
     {
-        "topic": "Array methods",
+        "topic": "Array and it's methods",
         "level": "",
         "description": "",
         "example": ""
     },
     {
-        "topic": "Object methods",
+        "topic": "Object and it's methods",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Set and it's methods",
+        "level": "",
+        "description": "Include WeakSet",
+        "example": ""
+    },
+    {
+        "topic": "Map and it's methods",
+        "level": "",
+        "description": "IncLude WeakMap",
+        "example": ""
+    },
+    {
+        "topic": "Typed Array",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "Date",
+        "level": "",
+        "description": "",
+        "example": ""
+    },
+    {
+        "topic": "RegExp",
         "level": "",
         "description": "",
         "example": ""
