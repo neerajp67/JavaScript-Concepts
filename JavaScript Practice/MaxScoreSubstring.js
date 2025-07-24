@@ -6,45 +6,39 @@
  */
 var maximumGain = function (s, x, y) {
 
-    let totalScore = 0;
-    let highPriorityPair, highPoints, lowPriorityPair, lowPoints;
+    let totalPoints = 0;
+    let highPriorityPair, lowPriorityPair, maxPoints, minPoints;
 
-    if (x >= y) {
-        highPriorityPair = "ab";
-        highPoints = x;
-        lowPriorityPair = "ba";
-        lowPoints = y;
+    if (x > y) {
+        highPriorityPair = 'ab';
+        lowPriorityPair = 'ba';
+        maxPoints = x;
+        minPoints = y;
     } else {
-        highPriorityPair = "ba";
-        highPoints = y;
-        lowPriorityPair = "ab";
-        lowPoints = x;
+        highPriorityPair = 'ba';
+        lowPriorityPair = 'ab';
+        maxPoints = y;
+        minPoints = x;
     }
 
-    const processString = (str, pair, points) => {
-        let stack = [];
-        let currentScore = 0;
-
-        for (let char of str) {
-            if (char === pair[1] && stack.length > 0 && stack[stack.length - 1] === pair[0]) {
-                stack.pop(); // Found a pair, remove it
-                currentScore += points;
-            } else {
-                stack.push(char); // No pair, add char to stack
+    const calculatePoints = (pair, points) => {
+        const stack = []
+        for (let ch of s) {
+            if (ch === pair[1] && stack.length && stack[stack.length - 1] === pair[0]) {
+                stack.pop();
+                totalPoints += points;
+            }
+            else {
+                stack.push(ch);
             }
         }
-        return { remainingStr: stack.join(''), score: currentScore };
-    };
+        s = stack.join('');
+    }
 
-    // First pass: remove high priority pairs
-    let firstPassResult = processString(s, highPriorityPair, highPoints);
-    totalScore += firstPassResult.score;
+    calculatePoints(highPriorityPair, maxPoints);
+    calculatePoints(lowPriorityPair, minPoints);
 
-    // Second pass: remove low priority pairs from the remaining string
-    let secondPassResult = processString(firstPassResult.remainingStr, lowPriorityPair, lowPoints);
-    totalScore += secondPassResult.score;
-
-    return totalScore;
+    return totalPoints;
 }
 
 const s = 'aabbaaxybbaabb', x = 5, y = 4;
